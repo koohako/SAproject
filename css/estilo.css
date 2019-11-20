@@ -5,7 +5,7 @@ html{
 .back{
 	width: 100%;
 	height: 100%;
-	background: url(img/iniBackground.png) no-repeat;
+	background: url(../img/iniBackground.png) no-repeat;
 	background-size: cover;
 	background-color: #987B48;
 }
@@ -74,31 +74,31 @@ div.form2:last-child{
 	margin: 0px 0px 10px 0px;
 }
 .ini{
-	background: url(img/iniNormal.png);
+	background: url(../img/iniNormal.png);
 }
 .ini:Hover{
-	background: url(img/iniHover.png);
+	background: url(../img/iniHover.png);
 }
 .ini:focus{
-	background: url(img/iniPushed.png);
+	background: url(../img/iniPushed.png);
 }
 .con{
-	background: url(img/conNormal.png);
+	background: url(../img/conNormal.png);
 }
 .con:Hover{
-	background: url(img/conHover.png);
+	background: url(../img/conHover.png);
 }
 .con:focus{
-	background: url(img/conPushed.png);
+	background: url(../img/conPushed.png);
 }
 .pon{
-	background: url(img/ponNormal.png);
+	background: url(../img/ponNormal.png);
 }
 .pon:Hover{
-	background: url(img/ponHover.png);
+	background: url(../img/ponHover.png);
 }
 .pon:focus{
-	background: url(img/ponPushed.png);
+	background: url(../img/ponPushed.png);
 }
 .form{
     display: flex;
