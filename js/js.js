@@ -32,3 +32,25 @@ function esquerda(){
         }, 1000)
       }, 1000)
    }
+
+
+   //
+var poderes = new Array()
+var divFala = document.getElementById("fala")
+var divNome = document.getElementById("personagemNome")
+
+function cartas( fala, nome) {
+    var maxEventos = 1
+    var evento = Math.float(Math.random() * maxEventos + 1)
+    if(evento==0){
+        nome.innerHTML = "cleidomiro"
+        fala.innerHTML = "ai chef ja vou avisando que vai dar merda isso aqui em, mas vc pode escolher a merda que vai dar, quer merda na economia ou nos recursos?"
+        
+    }
+
+}
+
+
+
+
+
