@@ -1,22 +1,23 @@
-function esquerda(){
+function esquerda(resposta){
     var carta = document.getElementById("baixo")
       var fimanimacao = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend"
       var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
-      var textoNome = "Campista"
-      var textoFala = "tdxfchgvjhgfthydrfcgv nbkhgiyuftydfhcv bnkgiuyuftydfxgc gftcvbhgfcv buytgfv bnjhytgfcv bnhgfcv bnhgfc bnhgtrfedfcvbnhjuytfrvbnjuytf"
-      var paragrafo = document.getElementById("personagemNome")
-      var fala = document.getElementById("fala")
       carta.className = "form animated slideOutLeft"
       setTimeout(function(){
-        paragrafo.innerHTML = textoNome
-        fala.innerHTML = textoFala
         carta.className = "form animated fadeInDown"
         var img = document.getElementById("personagem")
         img.src = linkImg
+        //chama a função que sorteia o evento e retorna o valor um para variavel opcao assim fazendo a ação da escolha
+        resposta = 1
+        cartas()
+        
+        return resposta
         setTimeout(function(){
           carta.classList += fimanimacao
+          
         }, 1000)
       }, 1000)
+      
    }
    function direita(){
       var carta = document.getElementById("baixo")
@@ -27,10 +28,14 @@ function esquerda(){
         carta.className = "form animated fadeInDown"
         var img = document.getElementById("personagem")
         img.src = linkImg
+        //chama a função que sorteia o evento e retorna o valor um para variavel opcao assim fazendo a ação da escolha
+        cartas()
         setTimeout(function(){
           carta.classList += fimanimacao
+          
         }, 1000)
       }, 1000)
+      
    }
 
 
@@ -38,15 +43,48 @@ function esquerda(){
 var poderes = new Array()
 var divFala = document.getElementById("fala")
 var divNome = document.getElementById("personagemNome")
+var divButonD = document.getElementById("direita")
+var divButonE = document.getElementById("esquerda")
 
-function cartas( fala, nome) {
-    var maxEventos = 1
-    var evento = Math.float(Math.random() * maxEventos + 1)
-    if(evento==0){
-        nome.innerHTML = "cleidomiro"
-        fala.innerHTML = "ai chef ja vou avisando que vai dar merda isso aqui em, mas vc pode escolher a merda que vai dar, quer merda na economia ou nos recursos?"
+function cartas() {
+    var maxEventos = 4
+    var evento = Math.floor(Math.random() * maxEventos + 1)
+    var opcao = 0
+    if(evento==1){
+        divNome.innerHTML = "cleidomiro"
+        divFala.innerHTML = "teste 1"
+        divButonD.innerHTML = "opção1"
+        divButonE.innerHTML = "opção2"
         
+        resposta(evento)
+
     }
+    if(evento==2){
+        divNome.innerHTML = "miro do cleido"
+        divFala.innerHTML = "teste 2"
+        divButonD.innerHTML = "opção1"
+        divButonE.innerHTML = "opção2"
+    }
+    if(evento==3){
+        divNome.innerHTML = "do miro cleido"
+        divFala.innerHTML = "teste 3"
+        divButonD.innerHTML = "opção1"
+        divButonE.innerHTML = "opção2"
+    }
+    if(evento==4){
+        divNome.innerHTML = "cleido miro do"
+        divFala.innerHTML = "teste 4"
+        divButonD.innerHTML = "opção1"
+        divButonE.innerHTML = "opção2"
+    }
+
+}
+
+function resposta(opcao) {
+    if (opcao==1){
+
+    }
+
 
 }
 
