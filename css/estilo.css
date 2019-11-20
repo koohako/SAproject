@@ -1,0 +1,143 @@
+html{
+	overflow-y:hidden;
+	overflow-x:hidden;
+}
+.back{
+	width: 100%;
+	height: 100%;
+	background: url(img/iniBackground.png) no-repeat;
+	background-size: cover;
+	background-color: #987B48;
+}
+.escolha{
+	width: 100%;
+	height: 100%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	opacity: 0%;
+	min-height: 100vh;
+	cursor: pointer;	
+}
+.img{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+#carta{
+	background-color: #efd292;
+	-webkit-box-shadow: 6px 6px 19px 2px rgba(0,0,0,0.66);
+	-moz-box-shadow: 6px 6px 19px 2px rgba(0,0,0,0.66);
+	box-shadow: 6px 6px 19px 2px rgba(0,0,0,0.66);	
+}
+.cartaMeio{
+	height: 400px;
+	width: 300px;
+	border-radius: 10px;
+	margin: 0px 0px 20px 0px;
+}
+.cartaCima{
+	height: 150px;
+	width: 800px;
+	border-radius: 10px;
+	margin: 0px 0px 30px 0px;
+	display: block;
+}
+.nomePersonagem{
+	height: 30px;
+	width: 300px;
+	border-radius: 10px;
+	margin: 0px 0px 20px 0px;
+}
+div.form1:first-child{
+	position: absolute;
+}
+div.form2:last-child{
+	position: relative;
+}
+.fala{
+	word-wrap: break-word;
+	text-justify: auto;
+	text-align: center;
+}
+#btn{
+	width: 151px;
+	height: 56px;
+	border: none;
+	outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+	outline-offset: 0px;
+	cursor: pointer;
+	margin: 0px 0px 10px 0px;
+}
+.ini{
+	background: url(img/iniNormal.png);
+}
+.ini:Hover{
+	background: url(img/iniHover.png);
+}
+.ini:focus{
+	background: url(img/iniPushed.png);
+}
+.con{
+	background: url(img/conNormal.png);
+}
+.con:Hover{
+	background: url(img/conHover.png);
+}
+.con:focus{
+	background: url(img/conPushed.png);
+}
+.pon{
+	background: url(img/ponNormal.png);
+}
+.pon:Hover{
+	background: url(img/ponHover.png);
+}
+.pon:focus{
+	background: url(img/ponPushed.png);
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.form1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	min-height: 100vh;
+	width: 100%;
+	height: 100%;
+}
+.form2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	flex-direction: column;
+}
+.pers{
+	margin: 6px 0px 0px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-weight: bold;
+}
+video{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	border: none;
+	outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+	outline-offset: 0px;
+	width: 100%;
+	height: 100%;
+} 
