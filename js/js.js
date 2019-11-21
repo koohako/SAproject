@@ -56,6 +56,12 @@ function NovaCarta() {
     divFala.innerHTML = " esquerda aumenta economia diminui recursos e direita aumenta recursos e diminui mao de obra"
     
 }
+if(evento==3){
+  //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
+  divNome.innerHTML = "sebastian"
+  divFala.innerHTML = " esquerda aumenta economia diminui recursos e direita aumenta recursos e diminui mao de obra"
+  
+}
     return evento;
     console.log("\neconomia: "+economia+"\nrecursos: "+recursos+"\ncoroa: "+coroa+"\nmao de obra: "+maoDeObra)
 }
@@ -78,6 +84,16 @@ function resposta(respostaAux,evento){
     }
   }
   if (evento==3){
+    if(respostaAux=="esquerda"){
+      economia += 20
+      recursos -= 20
+    }
+    if(respostaAux=="direita"){
+      maoDeObra -= 20
+      recursos += 20
+    }
+  }
+  if (evento==4){
     if(respostaAux=="esquerda"){
       economia += 20
       recursos -= 20
