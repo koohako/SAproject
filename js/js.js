@@ -2,11 +2,12 @@ function esquerda(){
     var carta = document.getElementById("baixo")
       var fimanimacao = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend"
       carta.className = "form animated slideOutLeft"
-      resposta("esquerda",NovaCarta())
+      
       setTimeout(function(){
         carta.className = "form animated fadeInDown"
         var img = document.getElementById("personagem")
         //img.src = linkImg
+        resposta("esquerda",NovaCarta())
         setTimeout(function(){
           carta.classList += fimanimacao
         }, 1000)
@@ -16,11 +17,12 @@ function esquerda(){
       var carta = document.getElementById("baixo")
       var fimanimacao = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend"
       carta.className = "form animated slideOutRight"
-      resposta("direita",NovaCarta())
+      
       setTimeout(function(){
         carta.className = "form animated fadeInDown"
         var img = document.getElementById("personagem")
         //img.src = linkImg
+        resposta("direita",NovaCarta())
         setTimeout(function(){
           carta.classList += fimanimacao
         }, 1000)
@@ -45,17 +47,17 @@ function NovaCarta() {
     if(evento==2){
       //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
       divNome.innerHTML = "juliana"
-      divFala.innerHTML = "ai chef ja vou avisando que vai dar merda isso aqui em, mas vc pode escolher a merda que vai dar, quer merda na economia ou nos recursos?, esqueda para economia e direita para recursos"
+      divFala.innerHTML = "esquerda aumenta coroa e diminui recursos e direita aumenta recursos e diminui coroa"
       
   }
     if(evento==3){
     //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
     divNome.innerHTML = "sebastian"
-    divFala.innerHTML = " esquerda aumenta economia diminui recursos"
+    divFala.innerHTML = " esquerda aumenta economia diminui recursos e direita aumenta recursos e diminui mao de obra"
     
 }
     return evento;
-
+    console.log("\neconomia: "+economia+"\nrecursos: "+recursos+"\ncoroa: "+coroa+"\nmao de obra: "+maoDeObra)
 }
 
 function resposta(respostaAux,evento){
@@ -66,16 +68,24 @@ function resposta(respostaAux,evento){
       recursos -= 20
   }
   if (evento==2){
-    if(respostaAux=="esquerda")
-      economia -= 20
-    if(respostaAux=="direita")
+    if(respostaAux=="esquerda"){
+      coroa += 20
       recursos -= 20
+    }
+    if(respostaAux=="direita"){
+      coroa -= 20
+      recursos += 20
+    }
   }
   if (evento==3){
-    if(respostaAux=="esquerda")
-      economia -= 20
-    if(respostaAux=="direita")
+    if(respostaAux=="esquerda"){
+      economia += 20
       recursos -= 20
+    }
+    if(respostaAux=="direita"){
+      maoDeObra -= 20
+      recursos += 20
+    }
   }
   
 }
