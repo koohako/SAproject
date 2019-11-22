@@ -1,4 +1,4 @@
-document.onkeyup = function (e) {
+document.onkeyup = function (e){
   if (e.which == 37) {
     var carta = document.getElementById("baixo")
     var fimanimacao = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend"
