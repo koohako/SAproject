@@ -1,4 +1,4 @@
-function esquerda(resposta){
+function esquerda(){
     var carta = document.getElementById("baixo")
       var fimanimacao = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend"
       var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
@@ -8,10 +8,10 @@ function esquerda(resposta){
         var img = document.getElementById("personagem")
         img.src = linkImg
         //chama a função que sorteia o evento e retorna o valor um para variavel opcao assim fazendo a ação da escolha
-        resposta = 1
-        cartas()
+  
+        resposta("esquerda", NovaCarta())
         
-        return resposta
+        
         setTimeout(function(){
           carta.classList += fimanimacao
           
@@ -29,7 +29,7 @@ function esquerda(resposta){
         var img = document.getElementById("personagem")
         img.src = linkImg
         //chama a função que sorteia o evento e retorna o valor um para variavel opcao assim fazendo a ação da escolha
-        cartas()
+        resposta("direita", NovaCarta())
         setTimeout(function(){
           carta.classList += fimanimacao
           
@@ -77,77 +77,57 @@ var divNome = document.getElementById("personagemNome")
 var divButonD = document.getElementById("direita")
 var divButonE = document.getElementById("esquerda")
 
-function cartas() {
-    var maxEventos = 4
-    var evento = Math.floor(Math.random() * maxEventos + 1)
-    var opcao = 0
-    if(evento==1){
-        divNome.innerHTML = "cleidomiro"
-        divFala.innerHTML = "teste 1"
-        divButonD.innerHTML = "opção1"
-        divButonE.innerHTML = "opção2"
-        
-        resposta(evento)
-
-    }
-    if(evento==2){
-        divNome.innerHTML = "miro do cleido"
-        divFala.innerHTML = "teste 2"
-        divButonD.innerHTML = "opção1"
-        divButonE.innerHTML = "opção2"
-    }
-    if(evento==3){
-        divNome.innerHTML = "do miro cleido"
-        divFala.innerHTML = "teste 3"
-        divButonD.innerHTML = "opção1"
-        divButonE.innerHTML = "opção2"
-    }
-    if(evento==4){
-        divNome.innerHTML = "cleido miro do"
-        divFala.innerHTML = "teste 4"
-        divButonD.innerHTML = "opção1"
-        divButonE.innerHTML = "opção2"
-    }
-
+function NovaCarta() {
+  var maxEventos = 3
+  var evento = Math.floor(Math.random() * maxEventos + 1)
+  if(evento==1){
+      //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
+      divNome.innerHTML = "cleidomiro"
+      divFala.innerHTML = "ai chef ja vou avisando que vai dar merda isso aqui em, mas vc pode escolher a merda que vai dar, quer merda na economia ou nos recursos?, esqueda para economia e direita para recursos"
+      
+  }
+  if(evento==2){
+    //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
+    divNome.innerHTML = "juliana"
+    divFala.innerHTML = "esquerda aumenta coroa e diminui recursos e direita aumenta recursos e diminui coroa"
+    
+}
+  if(evento==3){
+  //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
+  divNome.innerHTML = "sebastian"
+  divFala.innerHTML = " esquerda aumenta economia diminui recursos e direita aumenta recursos e diminui mao de obra"
+  
+}
+  return evento;
+  console.log("\neconomia: "+economia+"\nrecursos: "+recursos+"\ncoroa: "+coroa+"\nmao de obra: "+maoDeObra)
 }
 
-
-function resposta(respostaAux, evento) {
-  if (evento == 1) {
-    if (respostaAux == "esqueda")
-      economia -= 20
-    if (respostaAux == "direita")
-      recursos -= 20
+function resposta(respostaAux,evento){
+if (evento==1){
+  if(respostaAux=="esquerda")
+    economia -= 20
+  if(respostaAux=="direita")
+    recursos -= 20
+}
+if (evento==2){
+  if(respostaAux=="esquerda"){
+    coroa += 20
+    recursos -= 20
   }
-  if (evento == 2) {
-    if (respostaAux == "esquerda") {
-      coroa += 20
-      recursos -= 20
-    }
-    if (respostaAux == "direita") {
-      coroa -= 20
-      recursos += 20
-    }
+  if(respostaAux=="direita"){
+    coroa -= 20
+    recursos += 20
   }
-  if (evento == 3) {
-    if (respostaAux == "esquerda") {
-      economia += 20
-      recursos -= 20
-    }
-    if (respostaAux == "direita") {
-      maoDeObra -= 20
-      recursos += 20
-    }
+}
+if (evento==3){
+  if(respostaAux=="esquerda"){
+    economia += 20
+    recursos -= 20
   }
-  if (evento == 4) {
-    if (respostaAux == "esquerda") {
-      economia += 20
-      recursos -= 20
-    }
-    if (respostaAux == "direita") {
-      maoDeObra -= 20
-      recursos += 20
-    }
+  if(respostaAux=="direita"){
+    maoDeObra -= 20
+    recursos += 20
   }
+}
 
 }
