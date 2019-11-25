@@ -15,7 +15,7 @@ html{
 	display: flex;
     align-items: center;
     justify-content: center;
-	opacity: 50%;
+	opacity: 0;
 	min-height: 100vh;
 	cursor: pointer;	
 }
@@ -171,7 +171,16 @@ video{
 label[for="pause"]{
 	width: 50px;
 	height: 50px;
-	padding: 10px;
-	font-size: 30px;
+	cursor: pointer;
+	font-size: 20px;
+	background-color:#745107;
+	text-align: center;
+	color: #efd292;
+	font-family: "Aral";
+	margin: 0px;
+	border-radius: 3px;
 }
 
+body{
+	margin: 0px 0px 0px 0px;
+}
