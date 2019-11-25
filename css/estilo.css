@@ -15,7 +15,7 @@ html{
 	display: flex;
     align-items: center;
     justify-content: center;
-	opacity: 0%;
+	opacity: 0;
 	min-height: 100vh;
 	cursor: pointer;	
 }
@@ -53,8 +53,9 @@ html{
 	margin: 0px 0px 20px 0px;
 }
 #personagem{
-	margin-top: 99px;
 	border-radius: 10px;
+	height: 350px;
+	width: 260px;
 }
 div.form1:first-child{
 	position: absolute;
@@ -144,4 +145,20 @@ video{
 	outline-offset: 0px;
 	width: 100%;
 	height: 100%;
+}
+.respostasE{
+	margin-right: 20%;
+	word-wrap: break-word;
+	text-justify: auto;
+	text-align: center;
+	width: 20%;
+	height: 20%;
+}
+.respostasD{
+	margin-left: 20%;
+	word-wrap: break-word;
+	text-justify: auto;
+	text-align: center;
+	width: 20%;
+	height: 20%;
 }
