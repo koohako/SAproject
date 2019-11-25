@@ -111,34 +111,6 @@ function cartas() {
 
 }
 
-function resposta(opcao) {
-    if (opcao==1){
-
-    }
-
-
-  }
-  if (evento == 2) {
-    //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
-    divNome.innerHTML = "juliana"
-    divFala.innerHTML = "esquerda aumenta coroa e diminui recursos e direita aumenta recursos e diminui coroa"
-
-  }
-  if (evento == 3) {
-    //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
-    divNome.innerHTML = "sebastian"
-    divFala.innerHTML = " esquerda aumenta economia diminui recursos e direita aumenta recursos e diminui mao de obra"
-
-  }
-  if (evento == 3) {
-    //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
-    divNome.innerHTML = "sebastian"
-    divFala.innerHTML = " esquerda aumenta economia diminui recursos e direita aumenta recursos e diminui mao de obra"
-
-  }
-  return evento;
-  console.log("\neconomia: " + economia + "\nrecursos: " + recursos + "\ncoroa: " + coroa + "\nmao de obra: " + maoDeObra)
-
 
 function resposta(respostaAux, evento) {
   if (evento == 1) {
