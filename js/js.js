@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function esquerda(resposta){
     var carta = document.getElementById("baixo")
       var fimanimacao = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend"
@@ -38,7 +37,6 @@ function esquerda(resposta){
       }, 1000)
       
    }
-=======
 document.onkeyup = function (e){
   if (e.which == 37) {
     var carta = document.getElementById("baixo")
@@ -71,7 +69,6 @@ document.onkeyup = function (e){
     }, 1000)
   }
 };
->>>>>>> 57ba0eaf99f3977979ac6392ed0bc0b6e28747ef
 
 
 var economia = 50, recursos = 50, coroa = 50, maoDeObra = 50
@@ -80,7 +77,6 @@ var divNome = document.getElementById("personagemNome")
 var divButonD = document.getElementById("direita")
 var divButonE = document.getElementById("esquerda")
 
-<<<<<<< HEAD
 function cartas() {
     var maxEventos = 4
     var evento = Math.floor(Math.random() * maxEventos + 1)
@@ -120,15 +116,6 @@ function resposta(opcao) {
 
     }
 
-=======
-function NovaCarta() {
-  var maxEventos = 3
-  var evento = Math.floor(Math.random() * maxEventos + 1)
-  if (evento == 1) {
-    //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
-    divNome.innerHTML = "cleidomiro"
-    divFala.innerHTML = "ai chef ja vou avisando que vai dar merda isso aqui em, mas vc pode escolher a merda que vai dar, quer merda na economia ou nos recursos?, esqueda para economia e direita para recursos"
->>>>>>> 57ba0eaf99f3977979ac6392ed0bc0b6e28747ef
 
   }
   if (evento == 2) {
@@ -151,7 +138,7 @@ function NovaCarta() {
   }
   return evento;
   console.log("\neconomia: " + economia + "\nrecursos: " + recursos + "\ncoroa: " + coroa + "\nmao de obra: " + maoDeObra)
-}
+
 
 function resposta(respostaAux, evento) {
   if (evento == 1) {
