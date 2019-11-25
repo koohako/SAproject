@@ -131,3 +131,12 @@ if (evento==3){
 }
 
 }
+
+document.onkeyup(function(tecla){
+  if(tecla.which==	27 && document.getElementById("pause") == false){
+    document.getElementById("pause") = true
+  }
+  if(tecla.which==	27 && document.getElementById("pause") == true){
+    document.getElementById("pause") = false
+  }
+})
