@@ -15,7 +15,7 @@ html{
 	display: flex;
     align-items: center;
     justify-content: center;
-	opacity: 0;
+	opacity: 50%;
 	min-height: 100vh;
 	cursor: pointer;	
 }
@@ -117,8 +117,9 @@ div.form2:last-child{
     align-items: center;
     justify-content: center;
 	min-height: 100vh;
-	width: 100%;
+	width: 97%;
 	height: 100%;
+	margin-left: 3%;
 }
 .form2{
     display: flex;
