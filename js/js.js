@@ -1,9 +1,11 @@
 function esquerda(){
     var carta = document.getElementById("baixo")
-    
       var fimanimacao = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend"
       carta.className = "form animated slideOutLeft"
+      divButonD.className = "respostasD animated fadeOut faster"
+      divButonE.className = "respostasE animated fadeOut faster"
       setTimeout(function(){
+        
         carta.className = "form animated fadeInDown"
         var img = document.getElementById("personagem")
         
@@ -14,7 +16,8 @@ function esquerda(){
         
         setTimeout(function(){
           carta.classList += fimanimacao
-          
+          divButonD.className = "respostasD animated fadeIn faster"
+          divButonE.className = "respostasE animated fadeIn faster"
         }, 1000)
       }, 1000)
       
@@ -22,6 +25,8 @@ function esquerda(){
    function direita(){
       var carta = document.getElementById("baixo")
       var fimanimacao = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend"
+      divButonE.className = "respostasE animated fadeOut faster"
+      divButonD.className = "respostasD animated fadeOut faster"
       carta.className = "form animated slideOutRight"
       setTimeout(function(){
         carta.className = "form animated fadeInDown"       
@@ -30,7 +35,8 @@ function esquerda(){
         resposta("direita", NovaCarta())
         setTimeout(function(){
           carta.classList += fimanimacao
-          
+          divButonE.className = "respostasE animated fadeIn faster"
+          divButonD.className = "respostasD animated fadeIn faster"
         }, 1000)
       }, 1000)
       
@@ -40,7 +46,8 @@ document.onkeyup = function (e){
     var carta = document.getElementById("baixo")
     var fimanimacao = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend"
     carta.className = "form animated slideOutLeft"
-
+    divButonD.className = "respostasD animated fadeOut faster"
+    divButonE.className = "respostasE animated fadeOut faster"
     setTimeout(function () {
       carta.className = "form animated fadeInDown"
       
@@ -48,6 +55,8 @@ document.onkeyup = function (e){
       //img.src = linkImg
       resposta("esquerda", NovaCarta())
       setTimeout(function () {
+        divButonE.className = "respostasE animated fadeIn faster"
+          divButonD.className = "respostasD animated fadeIn faster"
         carta.classList += fimanimacao
       }, 1000)
     }, 1000)
@@ -56,13 +65,16 @@ document.onkeyup = function (e){
     var carta = document.getElementById("baixo")
     var fimanimacao = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend"
     carta.className = "form animated slideOutRight"
-
+    divButonE.className = "respostasE animated fadeOut faster"
+    divButonD.className = "respostasD animated fadeOut faster"
     setTimeout(function () {
       carta.className = "form animated fadeInDown"
       var img = document.getElementById("personagem")
       //img.src = linkImg
       resposta("direita", NovaCarta())
       setTimeout(function () {
+        divButonE.className = "respostasE animated fadeIn faster"
+        divButonD.className = "respostasD animated fadeIn faster"
         carta.classList += fimanimacao
       }, 1000)
     }, 1000)
@@ -79,7 +91,7 @@ var divButonE = document.getElementById("respostaE")
 function NovaCarta() {
   var maxEventos = 3
   var evento = Math.floor(Math.random() * maxEventos + 1)
-  divButonD.className = "respostasD animated fadeIn"
+  
   if(evento==1){
       //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
       divNome.innerHTML = "cleidomiro"
