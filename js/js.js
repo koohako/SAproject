@@ -160,9 +160,4 @@ document.onkeyup(function(e){
     checkbox.checked = false
   }
 })
-if(checkbox.checked==true){
-  alertMenu()
-}
-function alertMenu(){
-  swal("Artur você é um cara muito inteligente, eu adoro você. bjs da Gigi <3")
-}
+
