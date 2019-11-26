@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../css/estilo.css">
     <link rel="stylesheet" type="text/css" href="../css/animate.css">
 	</head>
-  <body style="background-color: #987b48;" onload="NovaCarta()">  
+  <body style="background-color: #987b48;" onload="NovaCarta()" onload="">  
     
     <div class="form1" id="cima">
       <div class="form1">
@@ -17,7 +17,7 @@
       <button class="escolha" id="direita" onclick="direita()"></button>
     </div>
     <div id="menu">
-        <input type="checkbox" id="pause">
+        <input type="button" id="pause">
         <label for="pause">&#9776;</label>
     </div>
     <div class="form" id="baixo">
@@ -32,5 +32,6 @@
       </div>
     </div>
     <script type="text/javascript" src="../js/js.js"></script>
+    <script type="text/javascript" src="../js/sweetalert2.all.js"></script>
 	</body>
 </html>

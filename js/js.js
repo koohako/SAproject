@@ -1,3 +1,6 @@
+var imported = document.createElement('script');
+imported.src="sweetalert2.all.js";
+document.head.appendChild(imported);
 function esquerda(){
     var carta = document.getElementById("baixo")
       var fimanimacao = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend"
@@ -98,7 +101,7 @@ function NovaCarta() {
   divNome.innerHTML = "sebastian"
   divFala.innerHTML = " esquerda aumenta economia diminui recursos e direita aumenta recursos e diminui mao de obra"
   divButonD.innerHTML = "colocar opção direita"
-      divButonE.innerHTML = "colocar opção esquerda"
+  divButonE.innerHTML = "colocar opção esquerda"
       
 }
   return evento;
@@ -143,3 +146,9 @@ document.onkeyup(function(e){
     checkbox.checked = false
   }
 })
+if(checkbox.checked==true){
+  alertMenu()
+}
+function alertMenu(){
+  swal("Artur você é um cara muito inteligente, eu adoro você. bjs da Gigi <3")
+}
