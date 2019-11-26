@@ -1,12 +1,11 @@
 function esquerda(){
     var carta = document.getElementById("baixo")
-    
       var fimanimacao = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend"
       carta.className = "form animated slideOutLeft"
       setTimeout(function(){
         carta.className = "form animated fadeInDown"
         var img = document.getElementById("personagem")
-        
+
         //chama a função que sorteia o evento e retorna o valor um para variavel opcao assim fazendo a ação da escolha
   
         resposta("esquerda", NovaCarta())
@@ -73,13 +72,10 @@ document.onkeyup = function (e){
 var economia = 50, recursos = 50, coroa = 50, maoDeObra = 50
 var divFala = document.getElementById("fala")
 var divNome = document.getElementById("personagemNome")
-var divButonD = document.getElementById("respostaD")
-var divButonE = document.getElementById("respostaE")
 
 function NovaCarta() {
   var maxEventos = 3
   var evento = Math.floor(Math.random() * maxEventos + 1)
-  divButonD.className = "respostasD animated fadeIn"
   if(evento==1){
       //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
       divNome.innerHTML = "cleidomiro"
