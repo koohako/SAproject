@@ -173,7 +173,7 @@ label[for="pause"]{
 	height: 50px;
 	cursor: pointer;
 	font-size: 20px;
-	background-color:#745107;
+	background-color:hsl(41, 87%, 25%);
 	text-align: center;
 	color: #efd292;
 	font-family: "Aral";
