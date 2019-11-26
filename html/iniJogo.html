@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/animate.css">
     <script>
       function msg(){
-        swal("Artur você é um cara muito inteligente, eu adoro você. bjs da Gigi <3")
+        swal("<button>Voltar ao inicio</button>\n<button>Pontuação</button>\n<button>Continuar jogando</button>")
       }
 
 
@@ -17,11 +17,6 @@
   <body style="background-color: #987b48;" onload="NovaCarta()">  
     
     <div class="form1" id="cima">
-        <div id="menu">
-            <button onclick="msg()">
-                Clica ni mim Artur
-            </button>
-        </div>
       <div class="form1">
         <p class="respostasE resposta" id="respostaE">gjwejgkkdjwekdukweudyude</p>
         <p class="respostasD resposta" id="respostaD">jkhwehckhwsedchkwhdkucwhkydhkycwhckwhckhwkhchkwjchjcwhhkwchkwchkwchk</p>
@@ -29,7 +24,9 @@
       <button class="escolha" id="esquerda" onclick="esquerda()"></button>
       <button class="escolha" id="direita" onclick="direita()"></button>
     </div>
-    
+    <div id="menu">
+        <label for="menu" onclick="msg()">&#9776;</label>
+    </div>
     <div class="form" id="baixo">
       <div class="cartaCima " id="carta">
         <p class="fala" id="fala"> Bem vindo!<br> jogar este jogo você deve escolher do meio para a esquerda, que significa “sim”, ou do meio para direita que significa “não”. Serão feitas perguntas onde você pode concordar ou discordar.</p>
