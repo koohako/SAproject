@@ -166,10 +166,8 @@ function alertMenu(){
     confirmButtonText: 'Sair'
   }).then((result) => {
     if (result.value) {
-      Swal.fire(
-        'Tem certeza?',
-        'você é inutil, não continua',
-      )
+      alert("ihwjdw")
+      
     }
   })
 }
