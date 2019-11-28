@@ -196,3 +196,6 @@ label[for="pause"]{
 	width: 85px;
 	height: 40px;
 }
+.swal2-confirm{
+	color: aqua;
+}
