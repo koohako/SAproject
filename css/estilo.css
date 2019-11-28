@@ -113,7 +113,7 @@ div.form2:last-child{
     align-items: center;
     justify-content: center;
 	flex-direction: column;
-	min-height: 100vh;
+	min-height: 50vh;
 }
 .form1{
     display: flex;
@@ -196,6 +196,11 @@ label[for="pause"]{
 	width: 85px;
 	height: 40px;
 }
-.swal2-confirm{
-	color: aqua;
+div.poderes:last-child{
+	display: flex;
+	position: absolute;
+	margin-left: 45%;
+	/* height: 450px;
+	width: 50px; */
+	size: 70%;
 }
