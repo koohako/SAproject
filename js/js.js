@@ -158,6 +158,7 @@ document.onkeyup(function(e){
   }
 })
 function alertMenu(){
+  swal("oi")
 }
 
 
