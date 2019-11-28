@@ -158,7 +158,6 @@ document.onkeyup(function(e){
   }
 })
 function alertMenu(){
-  
 }
 
 
