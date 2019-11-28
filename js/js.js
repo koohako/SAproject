@@ -158,7 +158,7 @@ document.onkeyup(function(e){
   }
 })
 function alertMenu(){
-  swal("")
+  Swal.fire('Any fool can use a computer')
 }
 
 
