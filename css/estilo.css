@@ -183,3 +183,16 @@ label[for="pause"]{
 	margin: 0px;
 	border-radius: 3px;
 }
+.divAlert{
+	display: flex;
+	flex-direction: column;
+}
+.btnAlert1{
+	border-left-color: rgb(48, 133, 214); border-right-color: rgb(48, 133, 214);
+}
+.btnAlert2{
+	background-color: #3086d6;
+	border-radius: 5px;
+	width: 85px;
+	height: 40px;
+}

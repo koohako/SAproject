@@ -158,7 +158,7 @@ document.onkeyup(function(e){
   }
 })
 function alertMenu(){
-  swal("voce é genial")
+  swal("")
 }
 
 
