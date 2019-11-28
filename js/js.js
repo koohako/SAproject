@@ -158,7 +158,20 @@ document.onkeyup(function(e){
   }
 })
 function alertMenu(){
-  swal("voce é genial")
+  Swal.fire({
+    title: 'MENU',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#3085d6',
+    confirmButtonText: 'Sair'
+  }).then((result) => {
+    if (result.value) {
+      Swal.fire(
+        'Tem certeza?',
+        'você é inutil, não continua',
+      )
+    }
+  })
 }
 
 
