@@ -5,14 +5,40 @@
 		<meta charset="utf-8">	
     <link rel="stylesheet" type="text/css" href="../css/estilo.css">
     <link rel="stylesheet" type="text/css" href="../css/animate.css">
+    
     <script>
+        
         function msg(){
-            swal("Artur você é um cara muito inteligente, eu adoro você. bjs da Gigi <3")
+            Swal.mixin({
+  input: 'text',
+  confirmButtonText: 'Next &rarr;',
+  showCancelButton: true,
+  progressSteps: ['1', '2', '3']
+}).queue([
+  {
+    title: 'Question 1',
+    text: 'Chaining swal2 modals is easy'
+  },
+  'Question 2',
+  'Question 3'
+]).then((result) => {
+  if (result.value) {
+    const answers = JSON.stringify(result.value)
+    Swal.fire({
+      title: 'All done!',
+      html: `
+        Your answers:
+        <pre><code>${answers}</code></pre>
+      `,
+      confirmButtonText: 'Lovely!'
+    })
+  }
+})
         }
     </script>
 	</head>
 	<body>
-        
-        <script src="../js/sweetalert2.all.js"></script>
+        <button onclick="msg()">awdawdawd</button>
+        <script src="../js/sweetalert2@9.js"></script>
 	</body>
 </html>
