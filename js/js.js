@@ -161,13 +161,14 @@ function alertMenu(){
   Swal.fire({
     title: 'MENU',
     showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#3085d6',
+    confirmButtonColor: '#987b48',
+    cancelButtonColor: '#987b48',
     confirmButtonText: 'Sair'
   }).then((result) => {
     if (result.value) {
-      alert("ihwjdw")
-      
+      setTimeout(function(){
+        window.location.href="../index.html"
+      },350)
     }
   })
 }
