@@ -1,5 +1,16 @@
 window.onload = function(){
-  Swal.fire('Bem vindo, imperador.\n Para jogar esse jogo vou lhe fazer propostas e você terá que responde-lás da maneira que você achar melhor. Lembrando que, você deve manter um equilibrio no seu imperio, deixando recursos, mão de obra, a coroa e economia estaveis. Para jogar basta clicar do lado que você escolher a resposta ou nas setas. ')
+  Swal.fire({
+    title: 'Bem vindo, imperador.',
+    text: "Para jogar esse jogo vou lhe fazer propostas e você terá que responde-lás da maneira que você achar melhor. Lembrando que, você deve manter um equilibrio no seu imperio, deixando recursos, mão de obra, coroa e economia estaveis.",
+    showCancelButton: false,
+    confirmButtonColor: '#987b48',
+    cancelButtonColor: '#987b48',
+    confirmButtonText: 'Continuar'
+  }).then((result) => {
+    if (result.value) {
+
+    }
+  })
   }
 
 function esquerda(){
