@@ -1,3 +1,7 @@
+window.onload = function(){
+  Swal.fire('Bem vindo, imperador.\n Para jogar esse jogo vou lhe fazer propostas e você terá que responde-lás da maneira que você achar melhor. Lembrando que, você deve manter um equilibrio no seu imperio, deixando recursos, mão de obra, a coroa e economia estaveis. Para jogar basta clicar do lado que você escolher a resposta ou nas setas. ')
+  }
+
 function esquerda(){
     var carta = document.getElementById("baixo")
       var fimanimacao = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend"
