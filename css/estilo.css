@@ -203,10 +203,24 @@ label[for="pause"]{
 	flex-direction: column;
 	min-height: 100vh;
 }
+
+.baixoCarta {
+	display: table;
+	width: 100%;
+	position: absolute;
+	
+}
+
 .poderes{
 	display: flex;
     align-items: center;
 	justify-content: center;
-	width: 100%;
-	height: 100px;
+	margin-left: 35%;
+	margin-right: 35%;
+}
+
+.baixoCarta .anos{
+ float: left;
+ margin-left: 50px;
+
 }
