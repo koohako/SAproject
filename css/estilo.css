@@ -224,3 +224,10 @@ label[for="pause"]{
  margin-left: 50px;
 
 }
+@font-face{
+	font-family: daora;
+	src: url('roman_font_7.ttf');
+}
+p {
+    font:20px daora;
+}
