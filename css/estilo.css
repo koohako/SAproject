@@ -226,7 +226,7 @@ label[for="pause"]{
 }
 @font-face{
 	font-family: daora;
-	src: url('roman_font_7.ttf');
+	src: url('../img/roman_font_7.ttf');
 }
 p {
     font:20px daora;
