@@ -1,3 +1,18 @@
+window.onload = function(){
+  Swal.fire({
+    title: 'Bem vindo, imperador.',
+    text: "Para jogar esse jogo vou lhe fazer propostas e você terá que responde-lás da maneira que você achar melhor. Lembrando que, você deve manter um equilibrio no seu imperio, deixando recursos, mão de obra, coroa e economia estaveis.",
+    showCancelButton: false,
+    confirmButtonColor: '#987b48',
+    cancelButtonColor: '#987b48',
+    confirmButtonText: 'Continuar'
+  }).then((result) => {
+    if (result.value) {
+
+    }
+  })
+  }
+
 function esquerda(){
     var carta = document.getElementById("baixo")
       var fimanimacao = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend"
@@ -69,7 +84,7 @@ document.onkeyup = function (e){
     divButonD.className = "respostasD animated fadeOut faster"
     setTimeout(function () {
       carta.className = "form animated fadeInDown"
-      var img = document.getElementById("personagem")
+      
       //img.src = linkImg
       resposta("direita", NovaCarta())
       setTimeout(function () {
@@ -79,23 +94,32 @@ document.onkeyup = function (e){
       }, 1000)
     }, 1000)
   }
-};
+};  
 
-
+var ano = 1500;
+var anosSobrevividos=0
+var divPontos = document.getElementById("anosSobrevividos")
 var economia = 50, recursos = 50, coroa = 50, maoDeObra = 50
 var divFala = document.getElementById("fala")
 var divNome = document.getElementById("personagemNome")
 var divButonD = document.getElementById("respostaD")
 var divButonE = document.getElementById("respostaE")
+
 function NovaCarta() {
+  divPontos.innerHTML = ("anos sobrevividos: " + anosSobrevividos.toFixed(0) +"<br>ano atual: " +ano.toFixed(0));
   var maxEventos = 3
   var evento = Math.floor(Math.random() * maxEventos + 1)
+   
+  var img = document.getElementById("personagem")
+  //if(ano == ano do evento especifico || ano == ano do evento especifico)
+  //if(ano == ano evento especifico)
+//}else
   if(evento==1){
-      //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
+      img.src = "../img/rei.png"
       divNome.innerHTML = "cleidomiro"
-      divFala.innerHTML = "ai chef ja vou avisando que vai dar merda isso aqui em, mas vc pode escolher a merda que vai dar, quer merda na economia ou nos recursos?, esqueda para economia e direita para recursos"
-      divButonD.innerHTML = "colocar opção direita"
-      divButonE.innerHTML = "colocar opção esquerda"
+      divFala.innerHTML = "não chegamos a muito tempo e os nativos parecem amigaveis, não acha que seria uma boa pedirmos favores em troca de algo?"
+      divButonD.innerHTML = "ofereça o catolisismo \n(menos mão de obra)"
+      divButonE.innerHTML = "ofereça espelhos  (mais mão de obra)"
       
       
   }
@@ -115,6 +139,9 @@ function NovaCarta() {
   divButonE.innerHTML = "colocar opção esquerda"
       
 }
+//}
+  anosSobrevividos +=6.6
+  ano +=6.6
   return evento;
   console.log("\neconomia: "+economia+"\nrecursos: "+recursos+"\ncoroa: "+coroa+"\nmao de obra: "+maoDeObra)
 }
@@ -122,9 +149,9 @@ function NovaCarta() {
 function resposta(respostaAux,evento){
 if (evento==1){
   if(respostaAux=="esquerda")
-    economia -= 20
+    maoDeObra += 20
   if(respostaAux=="direita")
-    recursos -= 20
+    maoDeObra -= 20
 }
 if (evento==2){
   if(respostaAux=="esquerda"){
@@ -158,39 +185,17 @@ document.onkeyup(function(e){
   }
 })
 function alertMenu(){
-  const swalWithBootstrapButtons = Swal.mixin({
-    customClass: {
-      confirmButton: 'btn btn-success',
-      cancelButton: 'btn btn-danger'
-    },
-    buttonsStyling: false
-  })
-  
-  swalWithBootstrapButtons.fire({
-    title: 'Are you sure?',
-    text: "You won't be able to revert this!",
-    icon: 'warning',
+  Swal.fire({
+    title: 'MENU',
     showCancelButton: true,
-    confirmButtonText: 'Yes, delete it!',
-    cancelButtonText: 'No, cancel!',
-    reverseButtons: true
+    confirmButtonColor: '#987b48',
+    cancelButtonColor: '#987b48',
+    confirmButtonText: 'Sair'
   }).then((result) => {
     if (result.value) {
-      swalWithBootstrapButtons.fire(
-        'Deleted!',
-        'Your file has been deleted.',
-        'success'
-      )
-    } else if (
-      /* Read more about handling dismissals below */
-      result.dismiss === Swal.DismissReason.cancel
-    ) {
-      swalWithBootstrapButtons.fire(
-        'Cancelled',
-        'Your imaginary file is safe :)',
-        'error'
-      )
+      setTimeout(function(){
+        window.location.href="../index.html"
+      },350)
     }
   })
 }
-

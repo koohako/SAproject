@@ -5,40 +5,48 @@
 		<meta charset="utf-8">	
     <link rel="stylesheet" type="text/css" href="../css/estilo.css">
     <link rel="stylesheet" type="text/css" href="../css/animate.css">
-    <script>
-      function msg(){
-        swal("<button>Voltar ao inicio</button>\n<button>Pontuação</button>\n<button>Continuar jogando</button>")
-      }
-
-
-
-    </script>
 	</head>
-  <body style="background-color: #987b48;" onload="NovaCarta()">  
+  <body style="background: url(../img/onda.jpg)" onload="NovaCarta()">  
     
     <div class="form1" id="cima">
       <div class="form1">
-        <p class="respostasE resposta" id="respostaE">gjwejgkkdjwekdukweudyude</p>
-        <p class="respostasD resposta" id="respostaD">jkhwehckhwsedchkwhdkucwhkydhkycwhckwhckhwkhchkwjchjcwhhkwchkwchkwchk</p>
+        <p class="respostasE resposta" id="respostaE">Resposta Esquerda taligadu bro</p>
+        <p class="respostasD resposta" id="respostaD">Resposta Direita né meu</p>
       </div>
       <button class="escolha" id="esquerda" onclick="esquerda()"></button>
       <button class="escolha" id="direita" onclick="direita()"></button>
     </div>
     <div id="menu">
-        <label for="menu" onclick="msg()">&#9776;</label>
+        <label for="menu" onclick="alertMenu()">&#9776;</label>
     </div>
     <div class="form" id="baixo">
       <div class="cartaCima " id="carta">
-        <p class="fala" id="fala"> Bem vindo!<br> jogar este jogo você deve escolher do meio para a esquerda, que significa “sim”, ou do meio para direita que significa “não”. Serão feitas perguntas onde você pode concordar ou discordar.</p>
+        <p class="fala1" id="fala">Para jogar você deve escolher opcões atraves das setas ← e → ou clicando com o mouse do lado desejado</p>
       </div>
       <div class="cartaMeio form2" id="carta">
         <img src="../img/anonimo.png" height="300px" width="300px" id="personagem">
       </div>
-      <div class="nomePersonagem " id="carta">
+      <div class="nomePersonagem" id="carta">
         <p class="pers" id="personagemNome">???????</p>
       </div>
+      
     </div>
+  <div class="baixoCarta">
+       <div class="anos"><h4 id="anosSobrevividos">anos sobrevividos: 0<br>ano atual: 1500</h4></div>
+        
+       <div class="poderes">
+         <div><div id="economia" ></div><img class="poderesImg" src="../img/economia.png" height="70px" style="margin-right: 40px;margin-left: 40px;"></div>
+         <div><div id="maoDeObra"></div><img class="poderesImg" src="../img/maodeobra.png" height="80px" style="margin-right: 40px;"></div>
+         <div><div id="recursos"  ></div><img class="poderesImg" src="../img/recursos.png" height="80px" style="margin-right: 40px;"></div>
+         <div><div id="coroa" ></div><img class="poderesImg" src="../img/coroa.png" height="60px" style="margin-right: 40px;"></div>
+
+        </div>
+          
+        </div>
+  </div>
+    
     <script type="text/javascript" src="../js/js.js"></script>
     <script src="../js/sweetalert2@9.js"></script>
+    <script src="../js/sweetalert2.all.js"></script>
 	</body>
 </html>
