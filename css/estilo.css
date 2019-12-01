@@ -231,3 +231,41 @@ label[for="pause"]{
 p {
     font:20px daora;
 }
+
+#coroa{
+	display: none;
+	background-color: ivory;
+	border-radius: 10px;
+	height: 10px;
+	width: 10px;
+	margin-left: 37px;
+	margin-bottom: 5px;
+}
+
+#economia{
+	display: none;
+	background-color: ivory;
+	border-radius: 10px;
+	height: 10px;
+	width: 10px;
+	margin-left: 68px;
+	margin-bottom: 5px;
+}
+#recursos{
+	display: none;
+	background-color: ivory;
+	border-radius: 10px;
+	height: 10px;
+	width: 10px;
+	margin-left: 28px;
+	margin-bottom: 5px;
+}
+#maoDeObra{
+	display: none;
+	background-color: ivory;
+	border-radius: 10px;
+	height: 10px;
+	width: 10px;
+	margin-left: 14px;
+	margin-bottom: 5px;
+}

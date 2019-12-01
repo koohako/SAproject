@@ -84,7 +84,7 @@ document.onkeyup = function (e){
     divButonD.className = "respostasD animated fadeOut faster"
     setTimeout(function () {
       carta.className = "form animated fadeInDown"
-      var img = document.getElementById("personagem")
+      
       //img.src = linkImg
       resposta("direita", NovaCarta())
       setTimeout(function () {
@@ -94,19 +94,28 @@ document.onkeyup = function (e){
       }, 1000)
     }, 1000)
   }
-};
+};  
 
-
+var ano = 1500;
+var anosSobrevividos=0
+var divPontos = document.getElementById("anosSobrevividos")
 var economia = 50, recursos = 50, coroa = 50, maoDeObra = 50
 var divFala = document.getElementById("fala")
 var divNome = document.getElementById("personagemNome")
 var divButonD = document.getElementById("respostaD")
 var divButonE = document.getElementById("respostaE")
+
 function NovaCarta() {
+  divPontos.innerHTML = ("anos sobrevividos: " + anosSobrevividos.toFixed(0) +"<br>ano atual: " +ano.toFixed(0));
   var maxEventos = 3
   var evento = Math.floor(Math.random() * maxEventos + 1)
+   
+  var img = document.getElementById("personagem")
+  //if(ano == ano do evento especifico || ano == ano do evento especifico)
+  //if(ano == ano evento especifico)
+//}else
   if(evento==1){
-      //var linkImg = "NÃO CONSEGUI COLOCAR IMG"
+      img.src = "../img/rei.png"
       divNome.innerHTML = "cleidomiro"
       divFala.innerHTML = "não chegamos a muito tempo e os nativos parecem amigaveis, não acha que seria uma boa pedirmos favores em troca de algo?"
       divButonD.innerHTML = "ofereça o catolisismo \n(menos mão de obra)"
@@ -130,6 +139,9 @@ function NovaCarta() {
   divButonE.innerHTML = "colocar opção esquerda"
       
 }
+//}
+  anosSobrevividos +=6.6
+  ano +=6.6
   return evento;
   console.log("\neconomia: "+economia+"\nrecursos: "+recursos+"\ncoroa: "+coroa+"\nmao de obra: "+maoDeObra)
 }
