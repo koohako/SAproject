@@ -106,11 +106,11 @@ function NovaCarta() {
   var maxEventos = 3
   var evento = Math.floor(Math.random() * maxEventos + 1)
   if(evento==1){
-      //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
+      //var linkImg = "NÃO CONSEGUI COLOCAR IMG"
       divNome.innerHTML = "cleidomiro"
-      divFala.innerHTML = "ai chef ja vou avisando que vai dar merda isso aqui em, mas vc pode escolher a merda que vai dar, quer merda na economia ou nos recursos?, esqueda para economia e direita para recursos"
-      divButonD.innerHTML = "colocar opção direita"
-      divButonE.innerHTML = "colocar opção esquerda"
+      divFala.innerHTML = "não chegamos a muito tempo e os nativos parecem amigaveis, não acha que seria uma boa pedirmos favores em troca de algo?"
+      divButonD.innerHTML = "ofereça o catolisismo \n(menos mão de obra)"
+      divButonE.innerHTML = "ofereça espelhos  (mais mão de obra)"
       
       
   }
@@ -137,9 +137,9 @@ function NovaCarta() {
 function resposta(respostaAux,evento){
 if (evento==1){
   if(respostaAux=="esquerda")
-    economia -= 20
+    maoDeObra += 20
   if(respostaAux=="direita")
-    recursos -= 20
+    maoDeObra -= 20
 }
 if (evento==2){
   if(respostaAux=="esquerda"){
