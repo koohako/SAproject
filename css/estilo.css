@@ -224,10 +224,12 @@ label[for="pause"]{
  margin-left: 50px;
 
 }
+
 @font-face{
 	font-family: daora;
 	src: url('../img/roman_font_7.ttf');
 }
+
 p {
     font:20px daora;
 }
@@ -251,6 +253,7 @@ p {
 	margin-left: 68px;
 	margin-bottom: 5px;
 }
+
 #recursos{
 	display: block;
 	background-color: ivory;
@@ -260,6 +263,7 @@ p {
 	margin-left: 28px;
 	margin-bottom: 5px;
 }
+
 #maoDeObra{
 	display: block;
 	background-color: ivory;
@@ -268,4 +272,58 @@ p {
 	width: 10px;
 	margin-left: 14px;
 	margin-bottom: 5px;
+}
+
+.divPoderes{
+	z-index: 2;
+	display: flex;
+    align-items: center;
+	justify-content: center;
+}
+.pontoPoder{
+	display: inherit;
+	position: absolute;
+	z-index: 1;
+    align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	min-height: 100px;
+}
+
+.aniEco{
+	height: 35px;
+	width: 70px;
+	background-color: #efd292;
+	margin-right: 40px;
+	margin-left: 40px;
+	animation-name: aniEco;
+  	animation-duration: 4s; 
+  	animation-fill-mode: forwards; 
+}
+
+.aniMao{
+	height: 40px;
+	width: 38px;
+	background-color: #efd292;
+	margin-right: 40px;
+	margin-top: 11px;
+	transition: height 4s;
+}
+
+.aniRec{
+	height: 40px;
+	width: 74px;
+	background-color: #efd292;
+	margin-right: 40px;
+	transition: height 4s;
+}
+
+.aniCor{
+	height: 30px;
+	width: 85px;
+	background-color: #efd292;
+	margin-right: 40px;
+	transition: height 2s;
+	/* transition-property: height;
+	transition-timing-function: ; */
 }
