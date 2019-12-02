@@ -114,15 +114,14 @@ var divBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao
 var auxDivBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 var divBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 var auxDivBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
+var evento=1
 
 function NovaCarta() {
   divPontos.innerHTML = ("anos sobrevividos: " + anosSobrevividos.toFixed(0) +"<br>ano atual: " +ano.toFixed(0));
   var maxEventos = 3
-  var evento = Math.floor(Math.random() * maxEventos + 1)
   var img = document.getElementById("personagem")
-  //if(ano == ano do evento especifico || ano == ano do evento especifico)
-  //if(ano == ano evento especifico)
-//}else
+ 
+  
   if(evento==1){
       img.src = "../img/rei.png"
       divNome.innerHTML = "cleidomiro"
@@ -149,18 +148,20 @@ function NovaCarta() {
   divButonE.innerHTML = "colocar opção esquerda"
   divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
   divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+
+  
 }
-//}
+
  
 auxDivBolinhaE = divBolinhaE;
 auxDivBolinhaD = divBolinhaD;
-
   anosSobrevividos +=6.6
   ano +=6.6
+  evento++
+  console.log("\neconomia: "+economia+"\nrecursos: "+recursos+"\ncoroa: "+coroa+"\nmao de obra: "+maoDeObra)
 
   return evento;
   
-  console.log("\neconomia: "+economia+"\nrecursos: "+recursos+"\ncoroa: "+coroa+"\nmao de obra: "+maoDeObra)
   
 }
 
