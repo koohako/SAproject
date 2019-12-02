@@ -17,7 +17,6 @@ musica.src="../src/faun.mp3"
 
   function tocarmusica(){
   musica.play()
-  musica.loop()
 }
 
 function esquerda(){
@@ -173,7 +172,7 @@ if (evento==1){
     maoDeObra -= 20
      Swal.fire({
       title: 'Descoberta!!',
-      text: 'O brasil foi descoberto em 1500, no dia 22 de abril. Por frotas comandadas por Pedro Alvares Cabral',
+      text: 'O Brasil foi descoberto em 1500, no dia 22 de abril. Por frotas comandadas por Pedro Alvares Cabral.',
       imageUrl: '../img/descoberta.jpg',
       imageWidth: 400,
       imageHeight: 200,
