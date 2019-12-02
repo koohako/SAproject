@@ -119,7 +119,6 @@ var evento=1
 
 function NovaCarta() {
   divPontos.innerHTML = ("anos sobrevividos: " + anosSobrevividos.toFixed(0) +"<br>ano atual: " +ano.toFixed(0));
-  var maxEventos = 3
   var img = document.getElementById("personagem")
  
   
