@@ -1,366 +1,365 @@
-	html{
+	/* html{
 		overflow-y:hidden;
 		overflow-x:hidden;
-	}
-	body{
-		margin: 0px 0px 0px 0px;
-	}
-	.back{
-		width: 100%;
-		height: 100%;
-		background: url(../img/iniBackground.png) no-repeat;
-		background-size: cover;
-		background-color: #987B48;
-	}
-	.escolha{
-		width: 100%;
-		height: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		opacity: 0;
-		min-height: 100vh;
-		cursor: pointer;	
-	}
-	.img{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		width: 100%;
-		height: 100%;
-	}
-	#carta{
-		background-color: #efd292;
-		-webkit-box-shadow: 6px 6px 19px 2px rgba(0,0,0,0.66);
-		-moz-box-shadow: 6px 6px 19px 2px rgba(0,0,0,0.66);
-		box-shadow: 6px 6px 19px 2px rgba(0,0,0,0.66);	
-	}
-	.cartaMeio{
-		height: 400px;
-		width: 300px;
-		border-radius: 10px;
-		margin: 0px 0px 20px 0px;
-	}
-	.cartaCima{
-		height: 150px;
-		width: 800px;
-		border-radius: 10px;
-		margin: 0px 0px 30px 0px;
-		display: block;
-	}
-	.nomePersonagem{
-		height: 30px;
-		width: 300px;
-		border-radius: 10px;
-		margin: 0px 0px 20px 0px;
-	}
-	#personagem{
-		border-radius: 10px;
-		height: 350px;
-		width: 260px;
-	}
-	div.form1:first-child{
-		position: absolute;
-	}
-	div.form2:last-child{
-		position: relative;
-	}
-	.fala1{
-		word-wrap: break-word;
-		text-justify: auto;
-		text-align: center;
-	}
-	#btn{
-		width: 151px;
-		height: 56px;
-		border: none;
-		outline: thin dotted;
-		outline: 0px auto -webkit-focus-ring-color;
-		outline-offset: 0px;
-		cursor: pointer;
-		margin: 0px 0px 10px 0px;
-	}
-	.ini{
-		background: url(../img/iniNormal.png);
-	}
-	.ini:Hover{
-		background: url(../img/iniHover.png);
-	}
-	.ini:focus{
-		background: url(../img/iniPushed.png);
-	}
-	.con{
-		background: url(../img/conNormal.png);
-	}
-	.con:Hover{
-		background: url(../img/conHover.png);
-	}
-	.con:focus{
-		background: url(../img/conPushed.png);
-	}
-	.pon{
-		background: url(../img/ponNormal.png);
-	}
-	.pon:Hover{
-		background: url(../img/ponHover.png);
-	}
-	.pon:focus{
-		background: url(../img/ponPushed.png);
-	}
-	.form{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		min-height: 50vh;
-	}
-	.form1{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		min-height: 100vh;
-		width: 96%;
-		height: 100%;
-		margin-left: 3%;
-	}
-	.form2{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-	}
-	.pers{
-		margin: 6px 0px 0px 0px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		font-weight: bold;
-	}
-	video{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		border: none;
-		outline: thin dotted;
-		outline: 0px auto -webkit-focus-ring-color;
-		outline-offset: 0px;
-		width: 100%;
-		height: 100%;
-	}
-	.respostasE{
-		margin-right: 500px;
-		word-wrap: break-word;
-		/* text-justify: auto;
-		text-align: center; */
-		width: 20%;
-		height: 20%;
-	}
-	.respostasD{
-		margin-left: 20%;
-		word-wrap: break-word;
-		/* text-justify: auto;
-		text-align: center; */
-		width: 20%;
-		height: 20%;
-	}
+	} */
+body{
+	margin: 0px 0px 0px 0px;
+}
+.back{
+	width: 100%;
+	height: 100%;
+	background: url(../img/iniBackground.png) no-repeat;
+	background-size: cover;
+	background-color: #987B48;
+}
+.escolha{
+	width: 100%;
+	height: 100%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	opacity: 0;
+	min-height: 100vh;
+	cursor: pointer;	
+}
+.img{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+#carta{
+	background-color: #efd292;
+	-webkit-box-shadow: 6px 6px 19px 2px rgba(0,0,0,0.66);
+	-moz-box-shadow: 6px 6px 19px 2px rgba(0,0,0,0.66);
+	box-shadow: 6px 6px 19px 2px rgba(0,0,0,0.66);	
+}
+.cartaMeio{
+	height: 400px;
+	width: 300px;
+	border-radius: 10px;
+	margin: 0px 0px 20px 0px;
+}
+.cartaCima{
+	height: 150px;
+	width: 800px;
+	border-radius: 10px;
+	margin: 0px 0px 30px 0px;
+	display: block;
+}
+.nomePersonagem{
+	height: 30px;
+	width: 300px;
+	border-radius: 10px;
+	margin: 0px 0px 20px 0px;
+}
+#personagem{
+	border-radius: 10px;
+	height: 350px;
+	width: 260px;
+}
+div.form1:first-child{
+	position: absolute;
+}
+div.form2:last-child{
+	position: relative;
+}
+.fala1{
+	word-wrap: break-word;
+	text-justify: auto;
+	text-align: center;
+}
+#btn{
+	width: 151px;
+	height: 56px;
+	border: none;
+	outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+	outline-offset: 0px;
+	cursor: pointer;
+	margin: 0px 0px 10px 0px;
+}
+.ini{
+	background: url(../img/iniNormal.png);
+}
+.ini:Hover{
+	background: url(../img/iniHover.png);
+}
+.ini:focus{
+	background: url(../img/iniPushed.png);
+}
+.con{
+	background: url(../img/conNormal.png);
+}
+.con:Hover{
+	background: url(../img/conHover.png);
+}
+.con:focus{
+	background: url(../img/conPushed.png);
+}
+.pon{
+	background: url(../img/ponNormal.png);
+}
+.pon:Hover{
+	background: url(../img/ponHover.png);
+}
+.pon:focus{
+	background: url(../img/ponPushed.png);
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	flex-direction: column;
+	min-height: 50vh;
+}
+.form1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	min-height: 100vh;
+	width: 96%;
+	height: 100%;
+	margin-left: 3%;
+}
+.form2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	flex-direction: column;
+}
+.pers{
+	margin: 6px 0px 0px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-weight: bold;
+}
+video{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	border: none;
+	outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+	outline-offset: 0px;
+	width: 100%;
+	height: 100%;
+}
+.respostasE{
+	margin-right: 500px;
+	word-wrap: break-word;
+	/* text-justify: auto;
+	text-align: center; */
+	width: 20%;
+	height: 20%;
+}
+.respostasD{
+	margin-left: 20%;
+	word-wrap: break-word;
+	/* text-justify: auto;
+	text-align: center; */
+	width: 20%;
+	height: 20%;
+}
+
+#pause{
+	display:  none;
+}
+
+label[for="pause"]{
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 20px;
+	background-color:hsl(41, 87%, 25%);
+	text-align: center;
+	color: #efd292;
+	font-family: "Aral";
+	margin: 0px;
+	border-radius: 3px;
+}
+.divAlert{
+	display: flex;
+	flex-direction: column;
+}
+.btnAlert1{
+	border-left-color: rgb(48, 133, 214); border-right-color: rgb(48, 133, 214);
+}
+.btnAlert2{
+	background-color: #3086d6;
+	border-radius: 5px;
+	width: 85px;
+	height: 40px;
+}
+.iniForm{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.baixoCarta {
+	display: table;
+	width: 100%;
+	position: absolute;
 	
-	#pause{
-		display:  none;
-	}
+}
+
+.poderes{
+	display: flex;
+    align-items: center;
+	justify-content: center;
+	margin-left: 35%;
+	margin-right: 35%;
+}
+
+.baixoCarta .anos{
+ float: left;
+ margin-left: 50px;
+
+}
+
+@font-face{
+	font-family: daora;
+	src: url('../img/roman_font_7.ttf');
+}
+
+p {
+    font:20px daora;
+}
+
+#coroa{
+	display: none;
+	background-color: ivory;
+	border-radius: 10px;
+	height: 10px;
+	width: 10px;
+	margin-left: 37px;
+	margin-bottom: 5px;
+}
+
+#economia{
+	display: none;
+	background-color: ivory;
+	border-radius: 10px;
+	height: 10px;
+	width: 10px;
+	margin-left: 68px;
+	margin-bottom: 5px;
+}
+
+#recursos{
+	display: none;
+	background-color: ivory;
+	border-radius: 10px;
+	height: 10px;
+	width: 10px;
+	margin-left: 28px;
+	margin-bottom: 5px;
+}
+
+#maoDeObra{
+	display: none;
+	background-color: ivory;
+	border-radius: 10px;
+	height: 10px;
+	width: 10px;
+	margin-left: 14px;
+	margin-bottom: 5px;
+}
+
+.divPoderes{
+	z-index: 2;
+	display: flex;
+    align-items: center;
+	justify-content: center;
+}
+.pontoPoder{
+	display: flex;
+	position: absolute;
+	z-index: 1;
+    align-items: center;
+	justify-content: center;
+	height: 90px;
+	width: 390px;
+}
+
+.aniEco{
+	height: 32px; /*Max height 64px */
+	width: 69px;
+	background-color: #efd292;
+	bottom: 0;
+	position: absolute;
+	transition: height 2s;
+}
+
+.aniMao{
+	height: 39px; /*Max height 78px */
+	width: 37px;
+	background-color: #efd292;
+	transition: height 2s;
+	bottom: 0;
+	position: absolute;
+}
+
+.aniRec{
+	height: 27px; /*Max height 54px */
+	width: 73px;
+	background-color: #efd292;
+	transition: height 2s;
+	bottom: 0;
+	position: absolute;
+}
+
+.aniCor{
 	
-	label[for="pause"]{
-		width: 50px;
-		height: 50px;
-		cursor: pointer;
-		font-size: 20px;
-		background-color:hsl(41, 87%, 25%);
-		text-align: center;
-		color: #efd292;
-		font-family: "Aral";
-		margin: 0px;
-		border-radius: 3px;
-	}
-	.divAlert{
-		display: flex;
-		flex-direction: column;
-	}
-	.btnAlert1{
-		border-left-color: rgb(48, 133, 214); border-right-color: rgb(48, 133, 214);
-	}
-	.btnAlert2{
-		background-color: #3086d6;
-		border-radius: 5px;
-		width: 85px;
-		height: 40px;
-	}
-	.iniForm{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-	
-	.baixoCarta {
-		display: table;
-		width: 100%;
-		position: absolute;
-		
-	}
-	
-	.poderes{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-left: 35%;
-		margin-right: 35%;
-	}
-	
-	.baixoCarta .anos{
-	 float: left;
-	 margin-left: 50px;
-	
-	}
-	
-	@font-face{
-		font-family: daora;
-		src: url('../img/roman_font_7.ttf');
-	}
-	
-	p {
-		font:20px daora;
-	}
-	
-	#coroa{
-		display: none;
-		background-color: ivory;
-		border-radius: 10px;
-		height: 10px;
-		width: 10px;
-		margin-left: 37px;
-		margin-bottom: 5px;
-	}
-	
-	#economia{
-		display: none;
-		background-color: ivory;
-		border-radius: 10px;
-		height: 10px;
-		width: 10px;
-		margin-left: 68px;
-		margin-bottom: 5px;
-	}
-	
-	#recursos{
-		display: none;
-		background-color: ivory;
-		border-radius: 10px;
-		height: 10px;
-		width: 10px;
-		margin-left: 28px;
-		margin-bottom: 5px;
-	}
-	
-	#maoDeObra{
-		display: none;
-		background-color: ivory;
-		border-radius: 10px;
-		height: 10px;
-		width: 10px;
-		margin-left: 14px;
-		margin-bottom: 5px;
-	}
-	
-	.divPoderes{
-		z-index: 2;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	.pontoPoder{
-		display: flex;
-		position: absolute;
-		z-index: 1;
-		align-items: center;
-		justify-content: center;
-		height: 90px;
-		width: 390px;
-	}
-	
-	.aniEco{
-		height: 32px; /*Max height 64px */
-		width: 69px;
-		background-color: #efd292;
-		bottom: 0;
-		position: absolute;
-		transition: height 2s;
-	}
-	
-	.aniMao{
-		height: 39px; /*Max height 78px */
-		width: 37px;
-		background-color: #efd292;
-		transition: height 2s;
-		bottom: 0;
-		position: absolute;
-	}
-	
-	.aniRec{
-		height: 27px; /*Max height 54px */
-		width: 73px;
-		background-color: #efd292;
-		transition: height 2s;
-		bottom: 0;
-		position: absolute;
-	}
-	
-	.aniCor{
-		
-		height: 30px; /*Max height 64px */
-		width: 84px;
-		background-color: #efd292;
-		transition: height 2s;
-		bottom: 0;
-		position: absolute;
-	}
-	
-	.bolinha{
-		height: 10px;
-		width: 10px;
-		margin-bottom: 5px;
-	}
-	.divEco{
-		position: relative;
-		width: 70px;
-		height: 64px;
-		right: 60px;
-		margin-top: 12px;
-	}
-	
-	.divMao{
-		position: relative;
-		width: 38px;
-		height: 78px;
-		right: 20px;
-		top: 5px;
-	}
-	
-	.divRec{
-		position: relative;
-		width: 74px;
-		height: 54px;
-		left: 20px;
-		bottom: 6px;
-	}
-	
-	.divCor{
-		position: relative;
-		width: 85px;
-		height: 60px;
-		margin-top: 10px;
-		left: 60px;
-	}
-	
+	height: 30px; /*Max height 64px */
+	width: 84px;
+	background-color: #efd292;
+	transition: height 2s;
+	bottom: 0;
+	position: absolute;
+}
+
+.bolinha{
+	height: 10px;
+	width: 10px;
+	margin-bottom: 5px;
+}
+.divEco{
+	position: relative;
+	width: 70px;
+	height: 64px;
+	right: 60px;
+	margin-top: 12px;
+}
+
+.divMao{
+	position: relative;
+	width: 38px;
+	height: 78px;
+	right: 20px;
+	top: 5px;
+}
+
+.divRec{
+	position: relative;
+	width: 74px;
+	height: 54px;
+	left: 20px;
+	bottom: 6px;
+}
+
+.divCor{
+	position: relative;
+	width: 85px;
+	height: 60px;
+	margin-top: 10px;
+	left: 60px;
+}
