@@ -104,12 +104,15 @@ var divFala = document.getElementById("fala")
 var divNome = document.getElementById("personagemNome")
 var divButonD = document.getElementById("respostaD")
 var divButonE = document.getElementById("respostaE")
+var divBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
+var auxDivBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
+var divBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
+var auxDivBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 
 function NovaCarta() {
   divPontos.innerHTML = ("anos sobrevividos: " + anosSobrevividos.toFixed(0) +"<br>ano atual: " +ano.toFixed(0));
   var maxEventos = 3
   var evento = Math.floor(Math.random() * maxEventos + 1)
-   
   var img = document.getElementById("personagem")
   //if(ano == ano do evento especifico || ano == ano do evento especifico)
   //if(ano == ano evento especifico)
@@ -118,10 +121,10 @@ function NovaCarta() {
       img.src = "../img/rei.png"
       divNome.innerHTML = "cleidomiro"
       divFala.innerHTML = "não chegamos a muito tempo e os nativos parecem amigaveis, não acha que seria uma boa pedirmos favores em troca de algo?"
-      divButonD.innerHTML = "ofereça o catolisismo \n(menos mão de obra)"
-      divButonE.innerHTML = "ofereça espelhos  (mais mão de obra)"
-      
-      
+      divButonD.innerHTML = "ofereça o catolisismo"
+      divButonE.innerHTML = "ofereça espelhos"
+      divBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+      divBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
   }
   if(evento==2){
     //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
@@ -129,7 +132,8 @@ function NovaCarta() {
     divFala.innerHTML = "esquerda aumenta coroa e diminui recursos e direita aumenta recursos e diminui coroa"
     divButonD.innerHTML = "colocar opção direita"
       divButonE.innerHTML = "colocar opção esquerda"
-      
+      divBolinhaD = [false/*economia*/,false/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
+      divBolinhaE = [false/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 }
   if(evento==3){
   //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
@@ -137,13 +141,21 @@ function NovaCarta() {
   divFala.innerHTML = " esquerda aumenta economia diminui recursos e direita aumenta recursos e diminui mao de obra"
   divButonD.innerHTML = "colocar opção direita"
   divButonE.innerHTML = "colocar opção esquerda"
-      
+  divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
+  divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
 }
 //}
+ 
+auxDivBolinhaE = divBolinhaE;
+auxDivBolinhaD = divBolinhaD;
+
   anosSobrevividos +=6.6
   ano +=6.6
+
   return evento;
+  
   console.log("\neconomia: "+economia+"\nrecursos: "+recursos+"\ncoroa: "+coroa+"\nmao de obra: "+maoDeObra)
+  
 }
 
 function resposta(respostaAux,evento){
@@ -198,4 +210,54 @@ function alertMenu(){
       },350)
     }
   })
+}
+
+function apareceBolinhaE() {
+  if(auxDivBolinhaE[0] == true){
+      document.getElementById("economia").style.display ="block"
+  }
+  if(auxDivBolinhaE[1] == true){
+    document.getElementById("recursos").style.display ="block"
+  }
+  if(auxDivBolinhaE[2] == true){
+    document.getElementById("coroa").style.display ="block"
+  }
+  if(auxDivBolinhaE[3] == true){
+    document.getElementById("maoDeObra").style.display ="block"
+  }
+  
+}
+function apareceBolinhaD() {
+  if(auxDivBolinhaD[0] == true){
+    document.getElementById("economia").style.display ="block"
+}
+if(auxDivBolinhaD[1] == true){
+  document.getElementById("recursos").style.display ="block"
+}
+if(auxDivBolinhaD[2] == true){
+  document.getElementById("coroa").style.display ="block"
+}
+if(auxDivBolinhaD[3] == true){
+  document.getElementById("maoDeObra").style.display ="block"
+}
+  
+}
+
+function desapareceBolinha() {
+  
+      document.getElementById("coroa").style.display ="none"
+ 
+ 
+    document.getElementById("maoDeObra").style.display ="none"
+  
+ 
+    document.getElementById("recursos").style.display ="none"
+  
+ 
+    document.getElementById("economia").style.display ="none"
+  
+    auxdivBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
+    auxdivBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
+    auxdivBolinhaD = divBolinhaD
+    auxdivBolinhaE = divBolinhaE
 }
