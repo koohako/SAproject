@@ -13,8 +13,8 @@
         <p class="respostasE resposta" id="respostaE">Resposta Esquerda taligadu bro</p>
         <p class="respostasD resposta" id="respostaD">Resposta Direita né meu</p>
       </div>
-      <button class="escolha" id="esquerda" onclick="esquerda()"></button>
-      <button class="escolha" id="direita" onclick="direita()"></button>
+      <button class="escolha" id="esquerda" onmouseover="apareceBolinhaE()" onmouseout="desapareceBolinha()" onclick="esquerda()"></button>
+      <button class="escolha" id="direita" onmouseover="apareceBolinhaD()" onmouseout="desapareceBolinha()" onclick="direita()"></button>
     </div>
     <div id="menu">
         <label for="menu" onclick="alertMenu()">&#9776;</label>
