@@ -121,8 +121,8 @@ function NovaCarta() {
       img.src = "../img/rei.png"
       divNome.innerHTML = "cleidomiro"
       divFala.innerHTML = "não chegamos a muito tempo e os nativos parecem amigaveis, não acha que seria uma boa pedirmos favores em troca de algo?"
-      divButonD.innerHTML = "ofereça o catolisismo \n(menos mão de obra)"
-      divButonE.innerHTML = "ofereça espelhos  (mais mão de obra)"
+      divButonD.innerHTML = "ofereça o catolisismo"
+      divButonE.innerHTML = "ofereça espelhos"
       divBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
       divBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
   }
