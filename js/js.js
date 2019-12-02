@@ -15,8 +15,9 @@ window.onload = function(){
 var musica = new Audio()
 musica.src="../src/faun.mp3"
 
-function tocarmusica(){
-musica.play()
+  function tocarmusica(){
+  musica.play()
+
 }
 
 function esquerda(){
@@ -105,7 +106,7 @@ document.onkeyup = function (e){
 var ano = 1500;
 var anosSobrevividos=0
 var divPontos = document.getElementById("anosSobrevividos")
-var economia = 50, recursos = 50, coroa = 50, maoDeObra = 50
+var economia = document.querySelector(".aniEco"), recursos = document.querySelector(".aniRec"), coroa = document.querySelector(".aniCor"), maoDeObra = document.querySelector(".anoMao")
 var divFala = document.getElementById("fala")
 var divNome = document.getElementById("personagemNome")
 var divButonD = document.getElementById("respostaD")
@@ -168,9 +169,16 @@ auxDivBolinhaD = divBolinhaD;
 function resposta(respostaAux,evento){
 if (evento==1){
   if(respostaAux=="esquerda")
-    maoDeObra += 20
+    maoDeObra.style.height += "20px"
   if(respostaAux=="direita")
     maoDeObra -= 20
+     Swal.fire({
+      title: 'Descoberta!!',
+      text: 'O Brasil foi descoberto em 1500, no dia 22 de abril. Por frotas comandadas por Pedro Alvares Cabral.',
+      imageUrl: '../img/descoberta.jpg',
+      confirmButtonColor: '#987b48',
+      imageWidth: 400,
+      imageHeight: 200,})
 }
 if (evento==2){
   if(respostaAux=="esquerda"){
@@ -268,3 +276,4 @@ function desapareceBolinha() {
     auxdivBolinhaD = divBolinhaD
     auxdivBolinhaE = divBolinhaE
 }
+
