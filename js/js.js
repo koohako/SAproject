@@ -8,10 +8,16 @@ window.onload = function(){
     confirmButtonText: 'Continuar'
   }).then((result) => {
     if (result.value) {
-
+      tocarmusica()
     }
   })
   }
+var musica = new Audio()
+musica.src="../src/faun.mp3"
+
+function tocarmusica(){
+musica.play()
+}
 
 function esquerda(){
     var carta = document.getElementById("baixo")
