@@ -106,7 +106,7 @@ document.onkeyup = function (e){
 var ano = 1500;
 var anosSobrevividos=0
 var divPontos = document.getElementById("anosSobrevividos")
-var economia = document.querySelector(".aniEco"), recursos = document.querySelector(".aniRec"), coroa = document.querySelector(".aniCor"), maoDeObra = document.querySelector(".anoMao")
+var economia = 50, recursos = 50, coroa = 50, maoDeObra = 50
 var divFala = document.getElementById("fala")
 var divNome = document.getElementById("personagemNome")
 var divButonD = document.getElementById("respostaD")
