@@ -8,9 +8,14 @@
       function pular() {
         window.location.href="iniJogo.html"
       }
+      var video = new video()
+      video.src="../src/iniVideo.mp4"
+      function iniciarVideo(){
+        video.play()
+      }
     </script>
 	</head>
-	<body style="background-color: black;">  
+	<body style="background-color: black;" onload="iniciarVideo()">  
     <div class="form"> 
        <video onended="pular()" autoplay controls >
         <source src="../src/iniVideo.mp4" type="video/mp4">
