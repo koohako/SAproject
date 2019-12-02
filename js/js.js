@@ -116,15 +116,14 @@ var auxDivBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*
 var divBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 var auxDivBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 var morte= false
+var evento=1
 
 function NovaCarta() {
   divPontos.innerHTML = ("anos sobrevividos: " + anosSobrevividos.toFixed(0) +"<br>ano atual: " +ano.toFixed(0));
   var maxEventos = 3
-  var evento = Math.floor(Math.random() * maxEventos + 1)
   var img = document.getElementById("personagem")
-  //if(ano == ano do evento especifico || ano == ano do evento especifico)
-  //if(ano == ano evento especifico)
-//}else
+ 
+  
   if(evento==1){
       img.src = "../img/rei.png"
       divNome.innerHTML = "cleidomiro"
@@ -151,8 +150,10 @@ function NovaCarta() {
   divButonE.innerHTML = "colocar opção esquerda"
   divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
   divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+
+  
 }
-//}
+
  
 if(maoDeObra>=78){
   maoDeObra = 78
@@ -172,13 +173,13 @@ if(coroa>=54){
 }
 auxDivBolinhaE = divBolinhaE;
 auxDivBolinhaD = divBolinhaD;
-
   anosSobrevividos +=6.6
   ano +=6.6
+  evento++
+  console.log("\neconomia: "+economia+"\nrecursos: "+recursos+"\ncoroa: "+coroa+"\nmao de obra: "+maoDeObra)
 
   return evento;
   
-  console.log("\neconomia: "+economia+"\nrecursos: "+recursos+"\ncoroa: "+coroa+"\nmao de obra: "+maoDeObra)
   
 }
 
@@ -191,6 +192,13 @@ if (evento==1){
   if(respostaAux=="direita"&&morte==false)
     maoDeObra -= 20
     aniMao.style.height = maoDeObra.toString()+"px"
+     Swal.fire({
+      title: 'Descoberta!!',
+      text: 'O Brasil foi descoberto em 1500, no dia 22 de abril. Por frotas comandadas por Pedro Alvares Cabral.',
+      imageUrl: '../img/descoberta.jpg',
+      confirmButtonColor: '#987b48',
+      imageWidth: 400,
+      imageHeight: 200,})
 }
 if (evento==2){
   if(respostaAux=="esquerda"&&morte==false){
