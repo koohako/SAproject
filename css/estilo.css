@@ -1,7 +1,7 @@
-	/* html{
-		overflow-y:hidden;
-		overflow-x:hidden;
-	} */
+html{
+	overflow-y:hidden;
+	overflow-x:hidden;
+}
 body{
 	margin: 0px 0px 0px 0px;
 }
@@ -297,6 +297,7 @@ p {
 	bottom: 0;
 	position: absolute;
 	transition: height 2s;
+	max-height: 64px;
 }
 
 .aniMao{
@@ -306,6 +307,7 @@ p {
 	transition: height 2s;
 	bottom: 0;
 	position: absolute;
+	max-height: 78px;
 }
 
 .aniRec{
@@ -315,6 +317,7 @@ p {
 	transition: height 2s;
 	bottom: 0;
 	position: absolute;
+	max-height: 54px;
 }
 
 .aniCor{
@@ -325,6 +328,7 @@ p {
 	transition: height 2s;
 	bottom: 0;
 	position: absolute;
+	max-height: 64px;
 }
 
 .bolinha{

@@ -17,7 +17,6 @@ musica.src="../src/faun.mp3"
 
   function tocarmusica(){
   musica.play()
-  musica.loop()
 }
 
 function esquerda(){
@@ -106,7 +105,8 @@ document.onkeyup = function (e){
 var ano = 1500;
 var anosSobrevividos=0
 var divPontos = document.getElementById("anosSobrevividos")
-var economia = document.querySelector(".aniEco"), recursos = document.querySelector(".aniRec"), coroa = document.querySelector(".aniCor"), maoDeObra = document.querySelector(".anoMao")
+var economia = 50, recursos = 50, coroa = 50, maoDeObra = 50
+var aniEco = document.getElementById("aniEco"), aniRec = document.getElementById("aniRec"), aniMao = document.getElementById("aniMao"), aniCor = document.getElementById("aniCor")
 var divFala = document.getElementById("fala")
 var divNome = document.getElementById("personagemNome")
 var divButonD = document.getElementById("respostaD")
@@ -115,6 +115,7 @@ var divBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao
 var auxDivBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 var divBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 var auxDivBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
+var morte= false
 
 function NovaCarta() {
   divPontos.innerHTML = ("anos sobrevividos: " + anosSobrevividos.toFixed(0) +"<br>ano atual: " +ano.toFixed(0));
@@ -153,6 +154,22 @@ function NovaCarta() {
 }
 //}
  
+if(maoDeObra>=78){
+  maoDeObra = 78
+  morte=true
+}
+if(recursos>=54){
+  recursos = 54
+  morte=true
+}
+if(economia>=64){
+  economia = 54
+  morte=true
+}
+if(coroa>=54){
+  coroa = 54
+  morte=true
+}
 auxDivBolinhaE = divBolinhaE;
 auxDivBolinhaD = divBolinhaD;
 
@@ -167,37 +184,42 @@ auxDivBolinhaD = divBolinhaD;
 
 function resposta(respostaAux,evento){
 if (evento==1){
-  if(respostaAux=="esquerda")
-    maoDeObra.style.height += "20px"
-  if(respostaAux=="direita")
+  if(respostaAux=="esquerda"&&morte==false)
+    maoDeObra += 20
+    aniMao.style.height = maoDeObra.toString()+"px"
+    
+  if(respostaAux=="direita"&&morte==false)
     maoDeObra -= 20
-     Swal.fire({
-      title: 'Sweet!',
-      text: 'Modal with a custom image.',
-      imageUrl: 'https://unsplash.it/400/200',
-      imageWidth: 400,
-      imageHeight: 200,
-      imageAlt: 'Custom image'})
+    aniMao.style.height = maoDeObra.toString()+"px"
 }
 if (evento==2){
-  if(respostaAux=="esquerda"){
+  if(respostaAux=="esquerda"&&morte==false){
     coroa += 20
     recursos -= 20
+    aniMao.style.height = coroa.toString()+"px"
+    aniMao.style.height = recursos.toString()+"px"
   }
-  if(respostaAux=="direita"){
+  if(respostaAux=="direita"&&morte==false){
     coroa -= 20
     recursos += 20
+    aniMao.style.height = coroa.toString()+"px"
+    aniMao.style.height = recursos.toString()+"px"
   }
 }
 if (evento==3){
-  if(respostaAux=="esquerda"){
+  if(respostaAux=="esquerda"&&morte==false){
     economia += 20
     recursos -= 20
+    aniMao.style.height = economia.toString()+"px"
+    aniMao.style.height = recursos.toString()+"px"
   }
-  if(respostaAux=="direita"){
+  if(respostaAux=="direita"&&morte==false){
     maoDeObra -= 20
     recursos += 20
+    aniMao.style.height = maoDeObra.toString()+"px"
+    aniMao.style.height = recursos.toString()+"px"
   }
+  
 }
 
 }
@@ -275,4 +297,3 @@ function desapareceBolinha() {
     auxdivBolinhaD = divBolinhaD
     auxdivBolinhaE = divBolinhaE
 }
-
