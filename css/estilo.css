@@ -328,7 +328,7 @@ p {
 	transition: height 2s;
 	bottom: 0;
 	position: absolute;
-	max-height: 64px;
+	max-height: 53px;
 }
 
 .bolinha{
@@ -363,7 +363,7 @@ p {
 .divCor{
 	position: relative;
 	width: 85px;
-	height: 60px;
-	margin-top: 10px;
+	height: 53px;
+	margin-top: 11px;
 	left: 60px;
 }
