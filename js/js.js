@@ -178,7 +178,7 @@ if (evento==1){
       imageUrl: '../img/descoberta.jpg',
       confirmButtonColor: '#987b48',
       imageWidth: 400,
-      imageHeight: 200,})
+      imageHeight: 200})
 }
 if (evento==2){
   if(respostaAux=="esquerda"){
