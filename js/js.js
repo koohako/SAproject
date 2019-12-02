@@ -171,6 +171,13 @@ if (evento==1){
     maoDeObra.style.height += "20px"
   if(respostaAux=="direita")
     maoDeObra -= 20
+     Swal.fire({
+      title: 'Sweet!',
+      text: 'Modal with a custom image.',
+      imageUrl: 'https://unsplash.it/400/200',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image'})
 }
 if (evento==2){
   if(respostaAux=="esquerda"){
@@ -268,3 +275,4 @@ function desapareceBolinha() {
     auxdivBolinhaD = divBolinhaD
     auxdivBolinhaE = divBolinhaE
 }
+
