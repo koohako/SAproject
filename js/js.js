@@ -17,6 +17,7 @@ musica.src="../src/faun.mp3"
 
   function tocarmusica(){
   musica.play()
+
 }
 
 function esquerda(){
@@ -174,9 +175,9 @@ if (evento==1){
       title: 'Descoberta!!',
       text: 'O Brasil foi descoberto em 1500, no dia 22 de abril. Por frotas comandadas por Pedro Alvares Cabral.',
       imageUrl: '../img/descoberta.jpg',
+      confirmButtonColor: '#987b48',
       imageWidth: 400,
-      imageHeight: 200,
-      imageAlt: 'Custom image'})
+      imageHeight: 200,})
 }
 if (evento==2){
   if(respostaAux=="esquerda"){
