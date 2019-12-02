@@ -188,6 +188,7 @@ if (evento==1){
   if(respostaAux=="esquerda"&&morte==false)
     maoDeObra += 20
     aniMao.style.height = maoDeObra.toString()+"px"
+    console.log("dsdadasd")
     
   if(respostaAux=="direita"&&morte==false)
     maoDeObra -= 20
@@ -204,28 +205,28 @@ if (evento==2){
   if(respostaAux=="esquerda"&&morte==false){
     coroa += 20
     recursos -= 20
-    aniMao.style.height = coroa.toString()+"px"
-    aniMao.style.height = recursos.toString()+"px"
+    aniCor.style.height = coroa.toString()+"px"
+    aniRec.style.height = recursos.toString()+"px"
   }
   if(respostaAux=="direita"&&morte==false){
     coroa -= 20
     recursos += 20
-    aniMao.style.height = coroa.toString()+"px"
-    aniMao.style.height = recursos.toString()+"px"
+    aniCor.style.height = coroa.toString()+"px"
+    aniRec.style.height = recursos.toString()+"px"
   }
 }
 if (evento==3){
   if(respostaAux=="esquerda"&&morte==false){
     economia += 20
     recursos -= 20
-    aniMao.style.height = economia.toString()+"px"
-    aniMao.style.height = recursos.toString()+"px"
+    aniEco.style.height = economia.toString()+"px"
+    aniRec.style.height = recursos.toString()+"px"
   }
   if(respostaAux=="direita"&&morte==false){
     maoDeObra -= 20
     recursos += 20
     aniMao.style.height = maoDeObra.toString()+"px"
-    aniMao.style.height = recursos.toString()+"px"
+    aniRec.style.height = recursos.toString()+"px"
   }
   
 }
