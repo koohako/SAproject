@@ -172,9 +172,9 @@ if (evento==1){
   if(respostaAux=="direita")
     maoDeObra -= 20
      Swal.fire({
-      title: 'Sweet!',
-      text: 'Modal with a custom image.',
-      imageUrl: 'https://unsplash.it/400/200',
+      title: 'Descoberta!!',
+      text: 'O brasil foi descoberto em 1500, no dia 22 de abril. Por frotas comandadas por Pedro Alvares Cabral',
+      imageUrl: '../img/descoberta.jpg',
       imageWidth: 400,
       imageHeight: 200,
       imageAlt: 'Custom image'})
