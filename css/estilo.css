@@ -327,3 +327,8 @@ p {
 	/* transition-property: height;
 	transition-timing-function: ; */
 }
+.bolinha{
+	height: 10px;
+	width: 10px;
+	margin-bottom: 5px;
+}
