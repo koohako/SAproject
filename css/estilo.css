@@ -1,7 +1,7 @@
-html{
-	overflow-y:hidden;
-	overflow-x:hidden;
-}
+	/* html{
+		overflow-y:hidden;
+		overflow-x:hidden;
+	} */
 body{
 	margin: 0px 0px 0px 0px;
 }
@@ -281,54 +281,85 @@ p {
 	justify-content: center;
 }
 .pontoPoder{
-	display: inherit;
+	display: flex;
 	position: absolute;
 	z-index: 1;
     align-items: center;
 	justify-content: center;
-	margin-top: 20px;
-	min-height: 100px;
+	height: 90px;
+	width: 390px;
 }
 
 .aniEco{
-	height: 35px;
-	width: 70px;
+	height: 32px; /*Max height 64px */
+	width: 69px;
 	background-color: #efd292;
-	margin-right: 40px;
-	margin-left: 40px;
-	animation-name: aniEco;
-  	animation-duration: 4s; 
-  	animation-fill-mode: forwards; 
+	bottom: 0;
+	position: absolute;
+	transition: height 2s;
 }
 
 .aniMao{
-	height: 40px;
-	width: 38px;
+	height: 39px; /*Max height 78px */
+	width: 37px;
 	background-color: #efd292;
-	margin-right: 40px;
-	margin-top: 11px;
-	transition: height 4s;
+	transition: height 2s;
+	bottom: 0;
+	position: absolute;
 }
 
 .aniRec{
-	height: 40px;
-	width: 74px;
+	height: 27px; /*Max height 54px */
+	width: 73px;
 	background-color: #efd292;
-	margin-right: 40px;
-	transition: height 4s;
+	transition: height 2s;
+	bottom: 0;
+	position: absolute;
 }
 
 .aniCor{
-	height: 30px;
-	width: 85px;
+	
+	height: 30px; /*Max height 64px */
+	width: 84px;
 	background-color: #efd292;
-	margin-right: 40px;
 	transition: height 2s;
-	/* transition-property: height;
-	transition-timing-function: ; */
+	bottom: 0;
+	position: absolute;
 }
+
 .bolinha{
 	height: 10px;
 	width: 10px;
 	margin-bottom: 5px;
+}
+.divEco{
+	position: relative;
+	width: 70px;
+	height: 64px;
+	right: 60px;
+	margin-top: 12px;
+}
+
+.divMao{
+	position: relative;
+	width: 38px;
+	height: 78px;
+	right: 20px;
+	top: 5px;
+}
+
+.divRec{
+	position: relative;
+	width: 74px;
+	height: 54px;
+	left: 20px;
+	bottom: 6px;
+}
+
+.divCor{
+	position: relative;
+	width: 85px;
+	height: 60px;
+	margin-top: 10px;
+	left: 60px;
 }
