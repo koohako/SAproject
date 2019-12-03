@@ -32,7 +32,7 @@ function esquerda(){
 
         //chama a função que sorteia o evento e retorna o valor um para variavel opcao assim fazendo a ação da escolha
   
-        resposta("esquerda", NovaCarta())
+        resposta("esquerda", NovaCarta(auxEvento))
         
         
         setTimeout(function(){
@@ -53,7 +53,7 @@ function esquerda(){
         carta.className = "form animated fadeInDown"       
         
         //chama a função que sorteia o evento e retorna o valor um para variavel opcao assim fazendo a ação da escolha
-        resposta("direita", NovaCarta())
+        resposta("direita", NovaCarta(auxEvento))
         setTimeout(function(){
           carta.classList += fimanimacao
           divButonE.className = "respostasE animated fadeIn faster"
@@ -74,7 +74,7 @@ document.onkeyup = function (e){
       
     
       //img.src = linkImg
-      resposta("esquerda", NovaCarta())
+      resposta("esquerda", NovaCarta(auxEvento))
       setTimeout(function () {
         divButonE.className = "respostasE animated fadeIn faster"
           divButonD.className = "respostasD animated fadeIn faster"
@@ -92,7 +92,7 @@ document.onkeyup = function (e){
       carta.className = "form animated fadeInDown"
       
       //img.src = linkImg
-      resposta("direita", NovaCarta())
+      resposta("direita", NovaCarta(auxEvento))
       setTimeout(function () {
         divButonE.className = "respostasE animated fadeIn faster"
         divButonD.className = "respostasD animated fadeIn faster"
@@ -116,15 +116,17 @@ var auxDivBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*
 var divBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 var auxDivBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 var morte= false
-var evento=0
+var auxEvento =0  
 
-function NovaCarta() {
+
+function NovaCarta(evento) {
+  
   divPontos.innerHTML = ("anos sobrevividos: " + anosSobrevividos.toFixed(0) +"<br>ano atual: " +ano.toFixed(0));
   var maxEventos = 3
   var img = document.getElementById("personagem")
- 
   
-  if(evento==1){
+  
+  if(evento==0){
       img.src = "../img/rei.png"
       divNome.innerHTML = "cleidomiro"
       divFala.innerHTML = "não chegamos a muito tempo e os nativos parecem amigaveis, não acha que seria uma boa pedirmos favores em troca de algo?"
@@ -133,7 +135,7 @@ function NovaCarta() {
       divBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
       divBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
   }
-  if(evento==2){
+  if(evento==1){
     //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
     divNome.innerHTML = "juliana"
     divFala.innerHTML = "esquerda aumenta coroa e diminui recursos e direita aumenta recursos e diminui coroa"
@@ -142,7 +144,7 @@ function NovaCarta() {
       divBolinhaD = [false/*economia*/,false/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
       divBolinhaE = [false/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 }
-  if(evento==3){
+  if(evento==2){
   //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
   divNome.innerHTML = "sebastian"
   divFala.innerHTML = " esquerda aumenta economia diminui recursos e direita aumenta recursos e diminui mao de obra"
@@ -190,12 +192,11 @@ auxDivBolinhaE = divBolinhaE;
 auxDivBolinhaD = divBolinhaD;
   anosSobrevividos +=6.6
   ano +=6.6
-  evento++
   console.log("\neconomia: "+economia+"\nrecursos: "+recursos+"\ncoroa: "+coroa+"\nmao de obra: "+maoDeObra)
+  auxEvento++
 
   return evento;
-  
-  
+
 }
 
 function resposta(respostaAux,evento){
@@ -204,20 +205,22 @@ function resposta(respostaAux,evento){
       maoDeObra += 20
       aniMao.style.height = maoDeObra.toString()+"px"
       console.log("esquerda")
-  }
-      
-    if(respostaAux=="direita"&&morte==false)
+    }
+    if(respostaAux=="direita"&&morte==false){
       maoDeObra -= 20
       aniMao.style.height = maoDeObra.toString()+"px"
-      Swal.fire({
-        title: 'Descoberta!!',
-        text: 'O Brasil foi descoberto em 1500, no dia 22 de abril. Por frotas comandadas por Pedro Alvares Cabral.',
-        imageUrl: '../img/descoberta.jpg',
-        confirmButtonColor: '#987b48',
-        imageWidth: 400,
-        imageHeight: 200,})
-        console.log("direita")
+      
+    }   
+    Swal.fire({
+      title: 'Descoberta!!',
+      text: 'O Brasil foi descoberto em 1500, no dia 22 de abril. Por frotas comandadas por Pedro Alvares Cabral.',
+      imageUrl: '../img/descoberta.jpg',
+      confirmButtonColor: '#987b48',
+      imageWidth: 400,
+      imageHeight: 200,})
+      console.log("direita")
   }
+
   if (evento==2){
     if(respostaAux=="esquerda"&&morte==false){
       coroa += 20
