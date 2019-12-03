@@ -105,7 +105,7 @@ document.onkeyup = function (e){
 var ano = 1500;
 var anosSobrevividos=0
 var divPontos = document.getElementById("anosSobrevividos")
-var economia = 50, recursos = 50, coroa = 50, maoDeObra = 50
+var economia = 32, recursos = 27, coroa = 30, maoDeObra = 39
 var aniEco = document.getElementById("aniEco"), aniRec = document.getElementById("aniRec"), aniMao = document.getElementById("aniMao"), aniCor = document.getElementById("aniCor")
 var divFala = document.getElementById("fala")
 var divNome = document.getElementById("personagemNome")
@@ -116,7 +116,7 @@ var auxDivBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*
 var divBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 var auxDivBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 var morte= false
-var evento=1
+var evento=0
 
 function NovaCarta() {
   divPontos.innerHTML = ("anos sobrevividos: " + anosSobrevividos.toFixed(0) +"<br>ano atual: " +ano.toFixed(0));
@@ -158,18 +158,33 @@ function NovaCarta() {
 if(maoDeObra>=78){
   maoDeObra = 78
   morte=true
+}else if(maoDeObra<=0){
+  maoDeObra = 0
+  morte = true
 }
+
 if(recursos>=54){
   recursos = 54
   morte=true
+}else if(recursos<=0){
+  recursos = 0
+  morte = true
 }
+
 if(economia>=64){
-  economia = 54
+  economia = 64
   morte=true
+}else if(economia<=0){
+  economia = 0
+  morte = true
 }
+
 if(coroa>=54){
   coroa = 54
   morte=true
+}else if(coroa<=0){
+  coroa = 0
+  morte = true
 }
 auxDivBolinhaE = divBolinhaE;
 auxDivBolinhaD = divBolinhaD;
@@ -208,30 +223,51 @@ if (evento==2){
     aniCor.style.height = coroa.toString()+"px"
     aniRec.style.height = recursos.toString()+"px"
   }
-  if(respostaAux=="direita"&&morte==false){
-    coroa -= 20
-    recursos += 20
-    aniCor.style.height = coroa.toString()+"px"
-    aniRec.style.height = recursos.toString()+"px"
+      
+    if(respostaAux=="direita"&&morte==false)
+      maoDeObra -= 20
+      aniMao.style.height = maoDeObra.toString()+"px"
+      Swal.fire({
+        title: 'Descoberta!!',
+        text: 'O Brasil foi descoberto em 1500, no dia 22 de abril. Por frotas comandadas por Pedro Alvares Cabral.',
+        imageUrl: '../img/descoberta.jpg',
+        confirmButtonColor: '#987b48',
+        imageWidth: 400,
+        imageHeight: 200,})
+        console.log("direita")
   }
-}
-if (evento==3){
-  if(respostaAux=="esquerda"&&morte==false){
-    economia += 20
-    recursos -= 20
-    aniEco.style.height = economia.toString()+"px"
-    aniRec.style.height = recursos.toString()+"px"
+  if (evento==2){
+    if(respostaAux=="esquerda"&&morte==false){
+      coroa += 20
+      recursos -= 20
+      aniCor.style.height = coroa.toString()+"px"
+      aniRec.style.height = recursos.toString()+"px"
+      
+    }
+    if(respostaAux=="direita"&&morte==false){
+      coroa -= 20
+      recursos += 20
+      aniCor.style.height = coroa.toString()+"px"
+      aniRec.style.height = recursos.toString()+"px"
+      
+    }
   }
-  if(respostaAux=="direita"&&morte==false){
-    maoDeObra -= 20
-    recursos += 20
-    aniMao.style.height = maoDeObra.toString()+"px"
-    aniRec.style.height = recursos.toString()+"px"
+  if (evento==3){
+    if(respostaAux=="esquerda"&&morte==false){
+      economia += 20
+      recursos -= 20
+      aniEco.style.height = economia.toString()+"px"
+      aniRec.style.height = recursos.toString()+"px"
+    }
+    if(respostaAux=="direita"&&morte==false){
+      maoDeObra -= 20
+      recursos += 20
+      aniMao.style.height = maoDeObra.toString()+"px"
+      aniRec.style.height = recursos.toString()+"px"
+    }
   }
-  
 }
 
-}
 var checkbox = document.getElementById("pause")
 document.onkeyup(function(e){
   if(e.which==	27){
