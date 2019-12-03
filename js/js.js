@@ -17,7 +17,6 @@ musica.src="../src/faun.mp3"
 
   function tocarmusica(){
   musica.play()
-
 }
 
 function esquerda(){
@@ -33,7 +32,7 @@ function esquerda(){
 
         //chama a função que sorteia o evento e retorna o valor um para variavel opcao assim fazendo a ação da escolha
   
-        resposta("esquerda", NovaCarta())
+        resposta("esquerda", NovaCarta(auxEvento))
         
         
         setTimeout(function(){
@@ -54,7 +53,7 @@ function esquerda(){
         carta.className = "form animated fadeInDown"       
         
         //chama a função que sorteia o evento e retorna o valor um para variavel opcao assim fazendo a ação da escolha
-        resposta("direita", NovaCarta())
+        resposta("direita", NovaCarta(auxEvento))
         setTimeout(function(){
           carta.classList += fimanimacao
           divButonE.className = "respostasE animated fadeIn faster"
@@ -75,7 +74,7 @@ document.onkeyup = function (e){
       
     
       //img.src = linkImg
-      resposta("esquerda", NovaCarta())
+      resposta("esquerda", NovaCarta(auxEvento))
       setTimeout(function () {
         divButonE.className = "respostasE animated fadeIn faster"
           divButonD.className = "respostasD animated fadeIn faster"
@@ -93,7 +92,7 @@ document.onkeyup = function (e){
       carta.className = "form animated fadeInDown"
       
       //img.src = linkImg
-      resposta("direita", NovaCarta())
+      resposta("direita", NovaCarta(auxEvento))
       setTimeout(function () {
         divButonE.className = "respostasE animated fadeIn faster"
         divButonD.className = "respostasD animated fadeIn faster"
@@ -106,7 +105,8 @@ document.onkeyup = function (e){
 var ano = 1500;
 var anosSobrevividos=0
 var divPontos = document.getElementById("anosSobrevividos")
-var economia = 50, recursos = 50, coroa = 50, maoDeObra = 50
+var economia = 32, recursos = 27, coroa = 30, maoDeObra = 39
+var aniEco = document.getElementById("aniEco"), aniRec = document.getElementById("aniRec"), aniMao = document.getElementById("aniMao"), aniCor = document.getElementById("aniCor")
 var divFala = document.getElementById("fala")
 var divNome = document.getElementById("personagemNome")
 var divButonD = document.getElementById("respostaD")
@@ -115,14 +115,17 @@ var divBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao
 var auxDivBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 var divBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 var auxDivBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
-var evento=1
+var morte= false
+var auxEvento =0  
 
-function NovaCarta() {
+
+function NovaCarta(evento) {
+  
   divPontos.innerHTML = ("anos sobrevividos: " + anosSobrevividos.toFixed(0) +"<br>ano atual: " +ano.toFixed(0));
   var img = document.getElementById("personagem")
- 
   
-  if(evento==1){
+  
+  if(evento==0){
       img.src = "../img/rei.png"
       divNome.innerHTML = "cleidomiro"
       divFala.innerHTML = "não chegamos a muito tempo e os nativos parecem amigaveis, não acha que seria uma boa pedirmos favores em troca de algo?"
@@ -131,7 +134,7 @@ function NovaCarta() {
       divBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
       divBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
   }
-  if(evento==2){
+  if(evento==1){
     //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
     divNome.innerHTML = "juliana"
     divFala.innerHTML = "esquerda aumenta coroa e diminui recursos e direita aumenta recursos e diminui coroa"
@@ -140,7 +143,7 @@ function NovaCarta() {
       divBolinhaD = [false/*economia*/,false/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
       divBolinhaE = [false/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 }
-  if(evento==3){
+  if(evento==2){
   //var linkImg = "COLOCAR O LINK DA IMAGEM DO PESOMAGEM QUE ESTA NA CARTA!!"
   divNome.innerHTML = "sebastian"
   divFala.innerHTML = " esquerda aumenta economia diminui recursos e direita aumenta recursos e diminui mao de obra"
@@ -153,54 +156,159 @@ function NovaCarta() {
 }
 
  
+
 auxDivBolinhaE = divBolinhaE;
 auxDivBolinhaD = divBolinhaD;
   anosSobrevividos +=6.6
   ano +=6.6
-  evento++
   console.log("\neconomia: "+economia+"\nrecursos: "+recursos+"\ncoroa: "+coroa+"\nmao de obra: "+maoDeObra)
+  auxEvento++
 
   return evento;
-  
-  
+
 }
 
 function resposta(respostaAux,evento){
-if (evento==1){
-  if(respostaAux=="esquerda")
-    maoDeObra.style.height += "20px"
-  if(respostaAux=="direita")
-    maoDeObra -= 20
-     Swal.fire({
+  
+  if(morte==true){
+    Swal.mixin({
+      input: 'text',
+      confirmButtonText: 'Ok.',
+      showCancelButton: false,
+      confirmButtonColor: '#987b48',
+    }).queue([
+      {
+        title: 'Você morreu!',
+        text: 'Coloque seu nome para salvar sua pontuação'
+      },
+    ]).then((result) => {
+      if (result.value) {
+        const answers = JSON.stringify(result.value)
+        Swal.fire({
+          title: 'Obrigado por ter jogado.',
+          html: `
+            Your answers:
+            <pre><code>${answers}</code></pre>
+          `,
+          confirmButtonText: 'Pronto.'
+        })
+      }
+    })
+  }else{
+  if (evento==1){
+    if(respostaAux=="esquerda"){
+      maoDeObra += 20
+      aniMao.style.backgroundColor = "lawngreen";
+      aniMao.style.height = maoDeObra.toString()+"px"
+      setTimeout(function voltacor(){
+        aniMao.style.backgroundColor = "#efd292";
+      }, 1500)
+    }
+    if(respostaAux=="direita"){
+      maoDeObra -= 20
+      aniMao.style.backgroundColor = "red";
+      aniMao.style.height = maoDeObra.toString()+"px"
+      setTimeout(function voltacor(){
+        aniMao.style.backgroundColor = "#efd292";
+      }, 1500)
+    }   
+    Swal.fire({
       title: 'Descoberta!!',
       text: 'O Brasil foi descoberto em 1500, no dia 22 de abril. Por frotas comandadas por Pedro Alvares Cabral.',
       imageUrl: '../img/descoberta.jpg',
       confirmButtonColor: '#987b48',
       imageWidth: 400,
       imageHeight: 200,})
+      console.log("direita")
+  }
+
+  if (evento==2){
+    if(respostaAux=="esquerda"&&morte==false){
+      coroa += 20
+      recursos -= 20
+      aniCor.style.backgroundColor = "lawngreen";
+      aniRec.style.backgroundColor = "red";
+      aniCor.style.height = coroa.toString()+"px"
+      aniRec.style.height = recursos.toString()+"px"
+      setTimeout(function voltacor(){
+        aniCor.style.backgroundColor = "#efd292";
+        aniRec.style.backgroundColor = "#efd292";
+      }, 1500)
+      
+    }
+    if(respostaAux=="direita"){
+      coroa -= 20
+      recursos += 20
+      aniCor.style.backgroundColor = "red";
+      aniRec.style.backgroundColor = "lawngreen";
+      aniCor.style.height = coroa.toString()+"px"
+      aniRec.style.height = recursos.toString()+"px"
+      setTimeout(function voltacor(){
+        aniCor.style.backgroundColor = "#efd292";
+        aniRec.style.backgroundColor = "#efd292";
+      }, 1500)
+    }
+  }
+  if (evento==3){
+    if(respostaAux=="esquerda"){
+      economia += 20
+      recursos -= 20
+      aniRec.style.backgroundColor = "red";
+      aniEco.style.backgroundColor = "lawngreen";
+      aniEco.style.height = economia.toString()+"px"
+      aniRec.style.height = recursos.toString()+"px"
+      setTimeout(function voltacor(){
+        aniRec.style.backgroundColor = "#efd292";
+        aniEco.style.backgroundColor = "#efd292";
+      }, 1500)
+    }
+    if(respostaAux=="direita"){
+      maoDeObra -= 20
+      recursos += 20
+      aniMao.style.backgroundColor = "red";
+      aniRec.style.backgroundColor = "lawngreen";
+      aniMao.style.height = maoDeObra.toString()+"px"
+      aniRec.style.height = recursos.toString()+"px"
+      setTimeout(function voltacor(){
+        aniRec.style.backgroundColor = "#efd292";
+        aniMao.style.backgroundColor = "#efd292";
+      }, 1500)
+    }
+  }
 }
-if (evento==2){
-  if(respostaAux=="esquerda"){
-    coroa += 20
-    recursos -= 20
-  }
-  if(respostaAux=="direita"){
-    coroa -= 20
-    recursos += 20
-  }
-}
-if (evento==3){
-  if(respostaAux=="esquerda"){
-    economia += 20
-    recursos -= 20
-  }
-  if(respostaAux=="direita"){
-    maoDeObra -= 20
-    recursos += 20
-  }
+if(maoDeObra>=78){
+  maoDeObra = 78
+  morte=true
+}else if(maoDeObra<=0){
+  maoDeObra = 0
+  morte = true
 }
 
+if(recursos>=54){
+  recursos = 54
+  morte=true
+}else if(recursos<=0){
+  recursos = 0
+  morte = true
 }
+
+if(economia>=64){
+  economia = 64
+  morte=true
+}else if(economia<=0){
+  economia = 0
+  morte = true
+}
+
+if(coroa>=54){
+  coroa = 54
+  morte=true
+}else if(coroa<=0){
+  coroa = 0
+  morte = true
+}
+}
+
 var checkbox = document.getElementById("pause")
 document.onkeyup(function(e){
   if(e.which==	27){
