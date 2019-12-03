@@ -200,32 +200,13 @@ auxDivBolinhaD = divBolinhaD;
 }
 
 function resposta(respostaAux,evento){
-if (evento==1){
-  if(respostaAux=="esquerda"&&morte==false)
-    maoDeObra += 20
-    aniMao.style.height = maoDeObra.toString()+"px"
-    console.log("dsdadasd")
-    
-  if(respostaAux=="direita"&&morte==false)
-    maoDeObra -= 20
-    aniMao.style.height = maoDeObra.toString()+"px"
-     Swal.fire({
-      title: 'Descoberta!!',
-      text: 'O Brasil foi descoberto em 1500, no dia 22 de abril. Por frotas comandadas por Pedro Alvares Cabral.',
-      imageUrl: '../img/descoberta.jpg',
-      confirmButtonColor: '#987b48',
-      imageWidth: 400,
-      imageHeight: 200})
-}
-if (evento==2){
-  if(respostaAux=="esquerda"&&morte==false){
-    coroa += 20
-    recursos -= 20
-    aniCor.style.height = coroa.toString()+"px"
-    aniRec.style.height = recursos.toString()+"px"
-  }
-      
-    if(respostaAux=="direita"&&morte==false)
+  if (evento==1){
+    if(respostaAux=="esquerda"&&morte==false){
+      maoDeObra += 20
+      aniMao.style.height = maoDeObra.toString()+"px"
+      console.log("esquerda")
+    }
+    if(respostaAux=="direita"&&morte==false){
       maoDeObra -= 20
       aniMao.style.height = maoDeObra.toString()+"px"
       
