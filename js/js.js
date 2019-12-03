@@ -16,7 +16,9 @@ var musica = new Audio()
 musica.src="../src/faun.mp3"
 
   function tocarmusica(){
-  musica.play()
+  musica.play();
+  musica.volume = 0.03
+  musica.loop = true 
 }
 
 function esquerda(){
@@ -190,7 +192,8 @@ function resposta(respostaAux,evento){
             Your answers:
             <pre><code>${answers}</code></pre>
           `,
-          confirmButtonText: 'Pronto.'
+          confirmButtonText: 'Pronto.',
+          confirmButtonColor: '#987b48'
         })
       }
     })
