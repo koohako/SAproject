@@ -157,6 +157,126 @@ function NovaCarta(evento) {
 }
 
  
+
+auxDivBolinhaE = divBolinhaE;
+auxDivBolinhaD = divBolinhaD;
+  anosSobrevividos +=6.6
+  ano +=6.6
+  console.log("\neconomia: "+economia+"\nrecursos: "+recursos+"\ncoroa: "+coroa+"\nmao de obra: "+maoDeObra)
+  auxEvento++
+
+  return evento;
+
+}
+
+function resposta(respostaAux,evento){
+  
+  if(morte==true){
+    Swal.mixin({
+      input: 'text',
+      confirmButtonText: 'Ok.',
+      showCancelButton: false,
+      confirmButtonColor: '#987b48',
+    }).queue([
+      {
+        title: 'Você morreu!',
+        text: 'Coloque seu nome para salvar sua pontuação'
+      },
+    ]).then((result) => {
+      if (result.value) {
+        const answers = JSON.stringify(result.value)
+        Swal.fire({
+          title: 'Obrigado por ter jogado.',
+          html: `
+            Your answers:
+            <pre><code>${answers}</code></pre>
+          `,
+          confirmButtonText: 'Pronto.'
+        })
+      }
+    })
+  }else{
+  if (evento==1){
+    if(respostaAux=="esquerda"){
+      maoDeObra += 20
+      aniMao.style.backgroundColor = "lawngreen";
+      aniMao.style.height = maoDeObra.toString()+"px"
+      setTimeout(function voltacor(){
+        aniMao.style.backgroundColor = "#efd292";
+      }, 1500)
+    }
+    if(respostaAux=="direita"){
+      maoDeObra -= 20
+      aniMao.style.backgroundColor = "red";
+      aniMao.style.height = maoDeObra.toString()+"px"
+      setTimeout(function voltacor(){
+        aniMao.style.backgroundColor = "#efd292";
+      }, 1500)
+    }   
+    Swal.fire({
+      title: 'Descoberta!!',
+      text: 'O Brasil foi descoberto em 1500, no dia 22 de abril. Por frotas comandadas por Pedro Alvares Cabral.',
+      imageUrl: '../img/descoberta.jpg',
+      confirmButtonColor: '#987b48',
+      imageWidth: 400,
+      imageHeight: 200,})
+      console.log("direita")
+  }
+
+  if (evento==2){
+    if(respostaAux=="esquerda"&&morte==false){
+      coroa += 20
+      recursos -= 20
+      aniCor.style.backgroundColor = "lawngreen";
+      aniRec.style.backgroundColor = "red";
+      aniCor.style.height = coroa.toString()+"px"
+      aniRec.style.height = recursos.toString()+"px"
+      setTimeout(function voltacor(){
+        aniCor.style.backgroundColor = "#efd292";
+        aniRec.style.backgroundColor = "#efd292";
+      }, 1500)
+      
+    }
+    if(respostaAux=="direita"){
+      coroa -= 20
+      recursos += 20
+      aniCor.style.backgroundColor = "red";
+      aniRec.style.backgroundColor = "lawngreen";
+      aniCor.style.height = coroa.toString()+"px"
+      aniRec.style.height = recursos.toString()+"px"
+      setTimeout(function voltacor(){
+        aniCor.style.backgroundColor = "#efd292";
+        aniRec.style.backgroundColor = "#efd292";
+      }, 1500)
+    }
+  }
+  if (evento==3){
+    if(respostaAux=="esquerda"){
+      economia += 20
+      recursos -= 20
+      aniRec.style.backgroundColor = "red";
+      aniEco.style.backgroundColor = "lawngreen";
+      aniEco.style.height = economia.toString()+"px"
+      aniRec.style.height = recursos.toString()+"px"
+      setTimeout(function voltacor(){
+        aniRec.style.backgroundColor = "#efd292";
+        aniEco.style.backgroundColor = "#efd292";
+      }, 1500)
+    }
+    if(respostaAux=="direita"){
+      maoDeObra -= 20
+      recursos += 20
+      aniMao.style.backgroundColor = "red";
+      aniRec.style.backgroundColor = "lawngreen";
+      aniMao.style.height = maoDeObra.toString()+"px"
+      aniRec.style.height = recursos.toString()+"px"
+      setTimeout(function voltacor(){
+        aniRec.style.backgroundColor = "#efd292";
+        aniMao.style.backgroundColor = "#efd292";
+      }, 1500)
+    }
+  }
+}
 if(maoDeObra>=78){
   maoDeObra = 78
   morte=true
@@ -188,69 +308,6 @@ if(coroa>=54){
   coroa = 0
   morte = true
 }
-auxDivBolinhaE = divBolinhaE;
-auxDivBolinhaD = divBolinhaD;
-  anosSobrevividos +=6.6
-  ano +=6.6
-  console.log("\neconomia: "+economia+"\nrecursos: "+recursos+"\ncoroa: "+coroa+"\nmao de obra: "+maoDeObra)
-  auxEvento++
-
-  return evento;
-
-}
-
-function resposta(respostaAux,evento){
-  if (evento==1){
-    if(respostaAux=="esquerda"&&morte==false){
-      maoDeObra += 20
-      aniMao.style.height = maoDeObra.toString()+"px"
-      console.log("esquerda")
-    }
-    if(respostaAux=="direita"&&morte==false){
-      maoDeObra -= 20
-      aniMao.style.height = maoDeObra.toString()+"px"
-      
-    }   
-    Swal.fire({
-      title: 'Descoberta!!',
-      text: 'O Brasil foi descoberto em 1500, no dia 22 de abril. Por frotas comandadas por Pedro Alvares Cabral.',
-      imageUrl: '../img/descoberta.jpg',
-      confirmButtonColor: '#987b48',
-      imageWidth: 400,
-      imageHeight: 200,})
-      console.log("direita")
-  }
-
-  if (evento==2){
-    if(respostaAux=="esquerda"&&morte==false){
-      coroa += 20
-      recursos -= 20
-      aniCor.style.height = coroa.toString()+"px"
-      aniRec.style.height = recursos.toString()+"px"
-      
-    }
-    if(respostaAux=="direita"&&morte==false){
-      coroa -= 20
-      recursos += 20
-      aniCor.style.height = coroa.toString()+"px"
-      aniRec.style.height = recursos.toString()+"px"
-      
-    }
-  }
-  if (evento==3){
-    if(respostaAux=="esquerda"&&morte==false){
-      economia += 20
-      recursos -= 20
-      aniEco.style.height = economia.toString()+"px"
-      aniRec.style.height = recursos.toString()+"px"
-    }
-    if(respostaAux=="direita"&&morte==false){
-      maoDeObra -= 20
-      recursos += 20
-      aniMao.style.height = maoDeObra.toString()+"px"
-      aniRec.style.height = recursos.toString()+"px"
-    }
-  }
 }
 
 var checkbox = document.getElementById("pause")

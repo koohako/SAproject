@@ -159,7 +159,6 @@ video{
 	height: 20%;
 }
 .respostasD{
-	margin-left: 20%;
 	word-wrap: break-word;
 	/* text-justify: auto;
 	text-align: center; */
@@ -227,7 +226,7 @@ label[for="pause"]{
 
 @font-face{
 	font-family: daora;
-	src: url('../img/roman_font_7.ttf');
+	src: url('../src/ATypewriterForMe.ttf');
 }
 
 p {
