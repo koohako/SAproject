@@ -17,7 +17,7 @@ musica.src="../src/faun.mp3"
 
   function tocarmusica(){
   musica.play();
-  musica.volume = 0.03
+  musica.volume = 0.08
   musica.loop = true 
 }
 
