@@ -11,13 +11,13 @@ function comeco () {
       tocarmusica()
     }
   })
-} 
+}
 var musica = new Audio()
 musica.src="../src/faun.mp3"
 
   function tocarmusica(){
   musica.play();
-  musica.volume = 0.08
+  musica.volume = 0.03
   musica.loop = true 
 }
 
@@ -124,6 +124,7 @@ var auxEvento =0
 function NovaCarta(evento) {
   
   divPontos.innerHTML = ("anos sobrevividos: " + anosSobrevividos.toFixed(0) +"<br>ano atual: " +ano.toFixed(0));
+  var maxEventos = 3
   var img = document.getElementById("personagem")
   
   
@@ -369,7 +370,7 @@ if(auxDivBolinhaD[3] == true){
 }
   
 }
-
+[]
 function desapareceBolinha() {
   
       document.getElementById("coroa").style.display ="none"
