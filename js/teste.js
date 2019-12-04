@@ -7,9 +7,9 @@ function register() {
         jogadores = new Array()
     
     var usuario = {
-      nome: document.getElementById("nome").value ,
-      serie: document.getElementById("serie").value,
-      pontuacao: document.getElementById("pontos").value
+      nome: nome ,
+     
+      pontuacao: anosSobrevividos
     };
     
 
@@ -38,10 +38,7 @@ function register() {
             var tdNome = document.createElement("td")
             tdNome.innerHTML = jogadores[i].nome
             tr.appendChild(tdNome);
-            
-            var tdTurma = document.createElement("td")
-            tdTurma.innerHTML = jogadores[i].serie
-            tr.appendChild(tdTurma);
+        
             
                 var tdPontuacao = document.createElement("td")
                 tdPontuacao.innerHTML = jogadores[i].pontuacao
