@@ -107,7 +107,7 @@ document.onkeyup = function (e){
 var ano = 1500;
 var anosSobrevividos=0
 var divPontos = document.getElementById("anosSobrevividos")
-var economia = 32, recursos = 27, coroa = 30, maoDeObra = 39
+var economia = 50, recursos = 50, coroa = 50, maoDeObra = 50
 var aniEco = document.getElementById("aniEco"), aniRec = document.getElementById("aniRec"), aniMao = document.getElementById("aniMao"), aniCor = document.getElementById("aniCor")
 var divFala = document.getElementById("fala")
 var divNome = document.getElementById("personagemNome")
@@ -201,17 +201,17 @@ function resposta(respostaAux,evento){
   }else{
   if (evento==1){
     if(respostaAux=="esquerda"){
-      maoDeObra += 20
+      maoDeObra += 5
       aniMao.style.backgroundColor = "lawngreen";
-      aniMao.style.height = maoDeObra.toString()+"px"
+      aniMao.style.height = maoDeObra.toString()+"%"
       setTimeout(function voltacor(){
         aniMao.style.backgroundColor = "#efd292";
       }, 1500)
     }
     if(respostaAux=="direita"){
-      maoDeObra -= 20
+      maoDeObra -= 5
       aniMao.style.backgroundColor = "red";
-      aniMao.style.height = maoDeObra.toString()+"px"
+      aniMao.style.height = maoDeObra.toString()+"%"
       setTimeout(function voltacor(){
         aniMao.style.backgroundColor = "#efd292";
       }, 1500)
@@ -228,12 +228,12 @@ function resposta(respostaAux,evento){
 
   if (evento==2){
     if(respostaAux=="esquerda"&&morte==false){
-      coroa += 20
-      recursos -= 20
+      coroa += 10
+      recursos -= 5
       aniCor.style.backgroundColor = "lawngreen";
       aniRec.style.backgroundColor = "red";
-      aniCor.style.height = coroa.toString()+"px"
-      aniRec.style.height = recursos.toString()+"px"
+      aniCor.style.height = coroa.toString()+"%"
+      aniRec.style.height = recursos.toString()+"%"
       setTimeout(function voltacor(){
         aniCor.style.backgroundColor = "#efd292";
         aniRec.style.backgroundColor = "#efd292";
@@ -241,12 +241,12 @@ function resposta(respostaAux,evento){
       
     }
     if(respostaAux=="direita"){
-      coroa -= 20
-      recursos += 20
+      coroa -= 5
+      recursos += 10
       aniCor.style.backgroundColor = "red";
       aniRec.style.backgroundColor = "lawngreen";
-      aniCor.style.height = coroa.toString()+"px"
-      aniRec.style.height = recursos.toString()+"px"
+      aniCor.style.height = coroa.toString()+"%"
+      aniRec.style.height = recursos.toString()+"%"
       setTimeout(function voltacor(){
         aniCor.style.backgroundColor = "#efd292";
         aniRec.style.backgroundColor = "#efd292";
@@ -255,24 +255,24 @@ function resposta(respostaAux,evento){
   }
   if (evento==3){
     if(respostaAux=="esquerda"){
-      economia += 20
-      recursos -= 20
+      economia += 10
+      recursos -= 15
       aniRec.style.backgroundColor = "red";
       aniEco.style.backgroundColor = "lawngreen";
-      aniEco.style.height = economia.toString()+"px"
-      aniRec.style.height = recursos.toString()+"px"
+      aniEco.style.height = economia.toString()+"%"
+      aniRec.style.height = recursos.toString()+"%"
       setTimeout(function voltacor(){
         aniRec.style.backgroundColor = "#efd292";
         aniEco.style.backgroundColor = "#efd292";
       }, 1500)
     }
     if(respostaAux=="direita"){
-      maoDeObra -= 20
-      recursos += 20
+      maoDeObra -= 6
+      recursos += 9
       aniMao.style.backgroundColor = "red";
       aniRec.style.backgroundColor = "lawngreen";
-      aniMao.style.height = maoDeObra.toString()+"px"
-      aniRec.style.height = recursos.toString()+"px"
+      aniMao.style.height = maoDeObra.toString()+"%"
+      aniRec.style.height = recursos.toString()+"%"
       setTimeout(function voltacor(){
         aniRec.style.backgroundColor = "#efd292";
         aniMao.style.backgroundColor = "#efd292";
