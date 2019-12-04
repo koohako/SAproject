@@ -24,7 +24,7 @@ function register() {
 
   function tabela(){
     jogadores = JSON.parse(localStorage.getItem("Jogadores"))
-    jogadores.sort(ordenarPorIdade)
+    jogadores.sort(ordenar)
     if(jogadores != null){
         var tabela = document.getElementById("tabela")
         
@@ -56,7 +56,7 @@ function register() {
 
 
   
-  function ordenarPorIdade(a, b){
+  function ordenar(a, b){
   return b.pontuacao - a.pontuacao  ;
   }
   
