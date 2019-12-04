@@ -368,7 +368,7 @@ if(auxDivBolinhaD[3] == true){
 }
   
 }
-[]
+
 function desapareceBolinha() {
   
       document.getElementById("coroa").style.display ="none"
