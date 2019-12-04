@@ -366,3 +366,34 @@ p {
 	margin-top: 11px;
 	left: 60px;
 }
+
+.formT{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	min-height: 100vh;
+	width: 100%;
+	height: 100%;
+}
+.table{
+	border: solid black 2px;
+	background-color: #efd292;
+}
+tr{
+	border: solid black 1px;
+}
+th{
+	border: solid black 1px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+td{
+	border: solid black 1px;
+}
+.tdPontos{
+	text-align: center;
+}
+.tdNome{
+	padding-right: 20px;
+	
+}

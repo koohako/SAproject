@@ -1,4 +1,4 @@
-window.onload = function(){
+function comeco(){
   Swal.fire({
     title: 'Bem vindo, imperador.',
     text: "Para jogar esse jogo vou lhe fazer propostas e você terá que responde-lás da maneira que você achar melhor. Lembrando que, você deve manter um equilibrio no seu imperio, deixando recursos, mão de obra, coroa e economia estaveis.",
@@ -124,7 +124,6 @@ var auxEvento =0
 function NovaCarta(evento) {
   
   divPontos.innerHTML = ("anos sobrevividos: " + anosSobrevividos.toFixed(0) +"<br>ano atual: " +ano.toFixed(0));
-  var maxEventos = 3
   var img = document.getElementById("personagem")
   
   
@@ -165,12 +164,12 @@ auxDivBolinhaD = divBolinhaD;
   anosSobrevividos +=6.6
   ano +=6.6
   console.log("\neconomia: "+economia+"\nrecursos: "+recursos+"\ncoroa: "+coroa+"\nmao de obra: "+maoDeObra)
-  auxEvento++
+
 
   return evento;
 
 }
-
+var nome =""
 function resposta(respostaAux,evento){
   
   if(morte==true){
@@ -187,6 +186,7 @@ function resposta(respostaAux,evento){
     ]).then((result) => {
       if (result.value) {
         const answers = JSON.stringify(result.value)
+        nome = result.value
         Swal.fire({
           title: 'Obrigado por ter jogado.',
           html: `
@@ -196,6 +196,8 @@ function resposta(respostaAux,evento){
           confirmButtonText: 'Pronto.',
           confirmButtonColor: '#987b48'
         })
+        register()
+        window.location.href = "../html/tabela.html"
       }
     })
   }else{
@@ -279,33 +281,34 @@ function resposta(respostaAux,evento){
       }, 1500)
     }
   }
+  auxEvento++
 }
-if(maoDeObra>=78){
-  maoDeObra = 78
+if(maoDeObra>=100){
+  maoDeObra = 100
   morte=true
 }else if(maoDeObra<=0){
   maoDeObra = 0
   morte = true
 }
 
-if(recursos>=54){
-  recursos = 54
+if(recursos>=100){
+  recursos = 100
   morte=true
 }else if(recursos<=0){
   recursos = 0
   morte = true
 }
 
-if(economia>=64){
-  economia = 64
+if(economia>=100){
+  economia = 100
   morte=true
 }else if(economia<=0){
   economia = 0
   morte = true
 }
 
-if(coroa>=54){
-  coroa = 54
+if(coroa>=100){
+  coroa = 100
   morte=true
 }else if(coroa<=0){
   coroa = 0
@@ -387,3 +390,72 @@ function desapareceBolinha() {
     auxdivBolinhaD = divBolinhaD
     auxdivBolinhaE = divBolinhaE
 }
+
+var jogadores = new Array();
+
+function register() {
+    
+    jogadores = JSON.parse(localStorage.getItem("Jogadores"))
+    if(jogadores == null)
+        jogadores = new Array()
+    
+    var usuario = {
+      nome: nome,
+      pontos: anosSobrevividos
+    };
+    
+
+    jogadores.push(usuario)
+    //serieAux.push(serie)
+
+    localStorage.setItem("Jogadores",JSON.stringify(jogadores));
+    //localStorage.setItem("serie",serieAux);
+
+
+  }
+
+  function tabela(){
+    jogadores = JSON.parse(localStorage.getItem("Jogadores"))
+    jogadores.sort(ordenar)
+    if(jogadores != null){
+        var tabela = document.getElementById("tabela")
+        
+        for(var i=0; i<jogadores.length; i++){
+            var tr = document.createElement("tr")
+            
+            var th = document.createElement("th")
+            th.innerHTML = (i+1)
+            tr.appendChild(th);
+            
+            var tdNome = document.createElement("td")
+            tdNome.setAttribute("class","tdNome")
+            tdNome.innerHTML = jogadores[i].nome
+            tr.appendChild(tdNome);
+       
+            
+                var tdPontuacao = document.createElement("td")
+                tdPontuacao.setAttribute("class","tdPontos")
+                tdPontuacao.innerHTML = jogadores[i].pontos.toFixed(0)
+                tr.appendChild(tdPontuacao);
+                        
+            tabela.appendChild(tr)
+        }
+    }	
+
+  }
+
+
+
+  
+  function ordenar(a, b){
+  return b.pontuacao - a.pontuacao  ;
+  }
+  
+  function imprimirArray(id, array) {
+    let span = document.getElementById(id);
+    span.innerHTML = '';
+  
+    for (let i = 0; i < array.length; i++) {
+      span.innerHTML += array[i].nome + ', idade ' + array[i].idade + ' anos.<br/>';
+    }
+  }
