@@ -424,20 +424,24 @@ function register() {
             var tr = document.createElement("tr")
             
             var th = document.createElement("th")
+            th.setAttribute("class","thNumero")
             th.innerHTML = (i+1)
             tr.appendChild(th);
-            
+    
             var tdNome = document.createElement("td")
             tdNome.setAttribute("class","tdNome")
             tdNome.innerHTML = jogadores[i].nome
             tr.appendChild(tdNome);
-       
+            
             
                 var tdPontuacao = document.createElement("td")
                 tdPontuacao.setAttribute("class","tdPontos")
                 tdPontuacao.innerHTML = jogadores[i].pontos.toFixed(0)
                 tr.appendChild(tdPontuacao);
-                        
+                if((i+1)%2==0){
+                  tdNome.style.backgroundColor = "#d6b671"
+                  tdPontuacao.style.backgroundColor = "#d6b671"
+                }     
             tabela.appendChild(tr)
         }
     }	
@@ -448,7 +452,7 @@ function register() {
 
   
   function ordenar(a, b){
-  return b.pontuacao - a.pontuacao  ;
+  return b.pontos - a.pontos  ;
   }
   
   function imprimirArray(id, array) {
