@@ -11,7 +11,7 @@ window.onload = function(){
       tocarmusica()
     }
   })
-}
+} 
 var musica = new Audio()
 musica.src="../src/faun.mp3"
 
