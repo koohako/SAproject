@@ -1,4 +1,4 @@
-function comeco () {
+window.onload = function(){
   Swal.fire({
     title: 'Bem vindo, imperador.',
     text: "Para jogar esse jogo vou lhe fazer propostas e você terá que responde-lás da maneira que você achar melhor. Lembrando que, você deve manter um equilibrio no seu imperio, deixando recursos, mão de obra, coroa e economia estaveis.",
@@ -170,7 +170,7 @@ auxDivBolinhaD = divBolinhaD;
   return evento;
 
 }
-var nome = ""
+
 function resposta(respostaAux,evento){
   
   if(morte==true){
@@ -187,7 +187,6 @@ function resposta(respostaAux,evento){
     ]).then((result) => {
       if (result.value) {
         const answers = JSON.stringify(result.value)
-        nome = result.value
         Swal.fire({
           title: 'Obrigado por ter jogado.',
           html: `
@@ -197,7 +196,6 @@ function resposta(respostaAux,evento){
           confirmButtonText: 'Pronto.',
           confirmButtonColor: '#987b48'
         })
-        window.location.href = "../html/tabela.html"
       }
     })
   }else{
@@ -389,72 +387,3 @@ function desapareceBolinha() {
     auxdivBolinhaD = divBolinhaD
     auxdivBolinhaE = divBolinhaE
 }
-
-
-//aqui é tudo tabela n mexa
-var jogadores = new Array();
-
-function register() {
-    
-    jogadores = JSON.parse(localStorage.getItem("Jogadores"))
-    if(jogadores == null)
-        jogadores = new Array()
-    
-    var usuario = {
-      nome: ,
-      pontuacao: anosSobrevividos
-    };
-    
-
-    jogadores.push(usuario)
-    //serieAux.push(serie)
-
-    localStorage.setItem("Jogadores",JSON.stringify(jogadores));
-    //localStorage.setItem("serie",serieAux);
-    window.location.href="../html/tabela.html"
-
-
-  }
-
-  function tabela(){
-    jogadores = JSON.parse(localStorage.getItem("Jogadores"))
-    jogadores.sort(ordenar)
-    if(jogadores != null){
-        var tabela = document.getElementById("tabela")
-        
-        for(var i=0; i<jogadores.length; i++){
-            var tr = document.createElement("tr")
-            
-            var th = document.createElement("th")
-            th.innerHTML = (i+1)
-            tr.appendChild(th);
-            
-            var tdNome = document.createElement("td")
-            tdNome.innerHTML = jogadores[i].nome
-            tr.appendChild(tdNome);
-            
-                var tdPontuacao = document.createElement("td")
-                tdPontuacao.innerHTML = jogadores[i].pontuacao
-                tr.appendChild(tdPontuacao);
-                        
-            tabela.appendChild(tr)
-        }
-    } 
-
-  }
-
-
-
-  
-  function ordenar(a, b){
-  return b.pontuacao - a.pontuacao  ;
-  }
-  
-  function imprimirArray(id, array) {
-    let span = document.getElementById(id);
-    span.innerHTML = '';
-  
-    for (let i = 0; i < array.length; i++) {
-      span.innerHTML += array[i].nome + ', idade ' + array[i].idade + ' anos.<br/>';
-    }
-  }
