@@ -142,7 +142,7 @@ function NovaCarta(evento) {
     divFala.innerHTML = "a coroa acha que nossas relações com os indios não dão tanto lucro, ela deseja que os escravize!!"
     divButonD.innerHTML = "faremos de vagar e com pressizao" //-um pouco mais mao de obra -mais coroa
       divButonE.innerHTML = "FAREMOS RAPIDO E A FORÇA" //mais mao de obra -um pouco mais coroa
-      divBolinhaD = [false/*economia*/,false/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
+      divBolinhaD = [false/*economia*/,false/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
       divBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
 }
   if(evento==2){
@@ -151,8 +151,8 @@ function NovaCarta(evento) {
   divFala.innerHTML = "há estrangeiros tentando embarcar em nosso terreno conquistado devemos montar linhas de defesa para protegermos nossas terras?"
   divButonD.innerHTML = "sim" //-menos mão de obra  -mais coroa
   divButonE.innerHTML = "não" //menos coroa
-  divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
-  divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaE = [false/*economia*/,false/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
+  divBolinhaD = [false/*economia*/,false/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
 }
 if(evento==3){
   img.src = "../img/comandante.png"
@@ -160,8 +160,8 @@ if(evento==3){
   divFala.innerHTML = "o rei de portugal nos confiou o poder dessas terras, desejas distribuilas para exploração para aqueles de confiança? ou ficará com tudo?"
   divButonD.innerHTML = "Não! Minhas terras!!!" //menos coroa -menos recurso
   divButonE.innerHTML = "distribua!" //um pouco mais de tudo
-  divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
-  divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaE = [true/*economia*/,true/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaD = [false/*economia*/,true/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
 }
 if(evento==4){
   img.src = "../img/rei.png"
@@ -170,7 +170,7 @@ if(evento==4){
   divButonD.innerHTML = "Não" //menos coroa -um pouco menos economia
   divButonE.innerHTML = "Sim" //menos recursos -um pouco mais economia
   divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
-  divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaD = [true/*economia*/,false/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
   //colocar spam pau brasil dps (gi)
 }
 if(evento==5){
@@ -179,8 +179,8 @@ if(evento==5){
   divFala.innerHTML = "A coroa precisa de nós, o comercio com as indias anda mal! Vamos enviar alguns recursos?"
   divButonD.innerHTML = "Eles podem aguentar mais." //mais economia -menos coroa
   divButonE.innerHTML = "Faço isso já!" //mais coroa -menos economia
-  divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
-  divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaE = [true/*economia*/,false/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
+  divBolinhaD = [true/*economia*/,false/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
 }
 if(evento==6){
   img.src = "../img/rei.png"
@@ -188,8 +188,8 @@ if(evento==6){
   divFala.innerHTML = "Encontramos mais terras, isso significa mais chances de joias, deseja realizar uma incursão?"
   divButonD.innerHTML = "leve alguns homens" //menos mão de obra -mais economia
   divButonE.innerHTML = "Sem nenhuma exploração aprofundada? sem chance!" //um pouco menos coroa -um pouco menos economia
-  divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
-  divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaE = [true/*economia*/,false/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
+  divBolinhaD = [true/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
 }
 if(evento==7){
   img.src = "../img/comandante.png"
@@ -197,8 +197,8 @@ if(evento==7){
   divFala.innerHTML = "ouvi alguns escravos falando sobre pedras preciosas escondidas entre a floresta! mas pode ser apenas boatos..."
   divButonD.innerHTML = "Boatos são boatos." //nada acontece
   divButonE.innerHTML = "leve-os para conferir junto de alguns homens" //um pouco menos mao de obra
-  divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
-  divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 }
 
 if(evento==8){
@@ -207,8 +207,8 @@ if(evento==8){
   divFala.innerHTML = "existem boatos sobre uma rebeliam dos indigenas"
   divButonD.innerHTML = "esta tudo sobe controle!" //menos recursos -menos mao de obra -menos coroa
   divButonE.innerHTML = "contenha-os antes que aconteça algo!" //um pouco menos mao de obra -mais coroa
-  divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
-  divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaE = [false/*economia*/,false/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaD = [false/*economia*/,true/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
 }
 if(evento==9){
   img.src = "../img/rei.png"
@@ -216,8 +216,8 @@ if(evento==9){
   divFala.innerHTML = "Não podemos deixar os estrangeiros terem vantagem no descobrimento das terras, devemos aumentar a exploração!"
   divButonD.innerHTML = "precisamos nos atentarmos a firmar a terra que ja conquistamos!" //um pouco menos coroa -um pouco mais mao de obra
   divButonE.innerHTML = "iremos em busca de terras!!! PELA COROAAA!!!" //Mais coroa -menos mao de obra
-  divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
-  divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaE = [true/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaD = [false/*economia*/,true/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
 }
 if(evento==10){
   img.src = "../img/comandante.png"
@@ -225,8 +225,8 @@ if(evento==10){
   divFala.innerHTML = "A coroa ordenou iniciarmos instancias de poder local para melhor admistração, algumas familias de burgeses tem uma proposta para terem mais poder em troca de algumas moedas "
   divButonD.innerHTML = "diga-os que ja tenho meus próprios trocados" //um pouco menos economia -mais coroa
   divButonE.innerHTML = "eles sempre foram minha primeira opção!" //mais economia -um pouco mais coroa
-  divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
-  divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaE = [true/*economia*/,false/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
+  divBolinhaD = [true/*economia*/,false/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
 }
 if(evento==11){
   img.src = "../img/rei.png"
@@ -234,7 +234,7 @@ if(evento==11){
   divFala.innerHTML = "Cada vez mais estrangeiros dão as caras por aqui, o que devemos fazer? eles não estão cumprindo o tratado!!!"
   divButonD.innerHTML = "prepare o ataque" //menos mao de obra -menos recursos
   divButonE.innerHTML = "fortaleça as defezas" //um pouco menos mao de obra -um pouco mais coroa
-  divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
+  divBolinhaE = [false/*economia*/,false/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
   divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
   //spam quebra tratado tordesilhas
 }
@@ -244,8 +244,8 @@ if(evento==12){
   divFala.innerHTML = "Cada vez mais temos terras ferteis com as explorações, que tal aumentarmos nossas plantações?"
   divButonD.innerHTML = "esta bom assim" //um pouco menos recursos
   divButonE.innerHTML = "quanto mais melhor" //menos mão de obra -mais economia -um pouco mais recursos
-  divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
-  divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
   //spam sobre os produtos plantados o brasil
 }
 if(evento==13){
@@ -254,8 +254,8 @@ if(evento==13){
   divFala.innerHTML = "A coroa nos trara mais mão de obra escrava trazidos da africa atravez do atlantico, onde devemos empregar a nova mao de obra?"
   divButonD.innerHTML = "mineração, é claro" //mais recursos
   divButonE.innerHTML = "plantações" //mais economia
-  divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
-  divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaE = [true/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
+  divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 //spam sobre a chegada dos navios negreiros
 }
 if(evento==14){
@@ -264,8 +264,8 @@ if(evento==14){
   divFala.innerHTML = "SENHOR A ESPANHA TOMOU CONTA DE PORTUGAL AGORA ESTAMOS SOB NOVA REGENCIA E NÃO HÁ O QUE FAZER..."
   divButonD.innerHTML = "O QUEE?!?!?!??" //tudo pra 0
   divButonE.innerHTML = "O QUEE?!?!?!??!" //tudo vai para 0
-  divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
-  divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaE = [true/*economia*/,true/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
+  divBolinhaD = [true/*economia*/,true/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
 }
  
 
