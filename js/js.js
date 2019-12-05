@@ -130,43 +130,43 @@ function NovaCarta(evento) {
   if(evento==0){
       img.src = "../img/rei.png"
       divNome.innerHTML = "cleidomiro"
-      divFala.innerHTML = "não chegamos a muito tempo e os nativos parecem amigaveis, não acha que seria uma boa pedirmos favores em troca de algo?"
-      divButonD.innerHTML = "ofereça o catolisismo"
-      divButonE.innerHTML = "ofereça espelhos"
+      divFala.innerHTML = "Não chegamos a muito tempo e os nativos parecem amigaveis, não acha que seria uma boa pedirmos favores em troca de algo?"
+      divButonD.innerHTML = "Ofereça o catolicismo"
+      divButonE.innerHTML = "Ofereça espelhos"
       divBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
       divBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
   }
   if(evento==1){
     img.src = "../img/carinhaserio.png"
     divNome.innerHTML = "Comandante"
-    divFala.innerHTML = "a coroa acha que nossas relações com os indios não dão tanto lucro, ela deseja que os escravize!!"
-    divButonD.innerHTML = "faremos de vagar e com pressizao" //-um pouco mais mao de obra -mais coroa
-      divButonE.innerHTML = "FAREMOS RAPIDO E A FORÇA" //mais mao de obra -um pouco mais coroa
+    divFala.innerHTML = "A coroa acha que nossas relações com os índios não dão tanto lucro, ela deseja que os escravizem!!"
+    divButonD.innerHTML = "Faremos devagar e com precisão" //-um pouco mais mao de obra -mais coroa
+      divButonE.innerHTML = "Faremos rápido e à força" //mais mao de obra -um pouco mais coroa
       divBolinhaD = [false/*economia*/,false/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
       divBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
 }
   if(evento==2){
   img.src = "../img/comandante.png"
   divNome.innerHTML = "Burguesia"
-  divFala.innerHTML = "há estrangeiros tentando embarcar em nosso terreno conquistado devemos montar linhas de defesa para protegermos nossas terras?"
-  divButonD.innerHTML = "sim" //-menos mão de obra  -mais coroa
-  divButonE.innerHTML = "não" //menos coroa
+  divFala.innerHTML = "Há estrangeiros tentando ocupar nosso território conquistado. Devemos montar linhas de defesa para proteger nossas terras?"
+  divButonD.innerHTML = "Sim" //-menos mão de obra  -mais coroa
+  divButonE.innerHTML = "Não" //menos coroa
   divBolinhaE = [false/*economia*/,false/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
   divBolinhaD = [false/*economia*/,false/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
 }
 if(evento==3){
   img.src = "../img/comandante.png"
   divNome.innerHTML = "Burguesia"
-  divFala.innerHTML = "o rei de portugal nos confiou o poder dessas terras, desejas distribuilas para exploração para aqueles de confiança? ou ficará com tudo?"
+  divFala.innerHTML = "O Rei de Portugal nos confiou o poder dessas terras. Desejas distribuí-las para exploração àqueles de confiança? Ou você ficará com tudo?"
   divButonD.innerHTML = "Não! Minhas terras!!!" //menos coroa -menos recurso
-  divButonE.innerHTML = "distribua!" //um pouco mais de tudo
+  divButonE.innerHTML = "Distribua!" //um pouco mais de tudo
   divBolinhaE = [true/*economia*/,true/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
   divBolinhaD = [false/*economia*/,true/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
 }
 if(evento==4){
   img.src = "../img/rei.png"
   divNome.innerHTML = "Portugal"
-  divFala.innerHTML = "As arvores neste local são magestosas, produzem um pigmento avermelhado e tem grande ultilidade como materia prima, devemos tornar isso a nosso favor!!"
+  divFala.innerHTML = "As árvores neste local são magestosas, produzem um pigmento avermelhado e tem grande ultilidade como matéria prima. Devemos tornar isso a nosso favor!!"
   divButonD.innerHTML = "Não" //menos coroa -um pouco menos economia
   divButonE.innerHTML = "Sim" //menos recursos -um pouco mais economia
   divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
@@ -176,7 +176,7 @@ if(evento==4){
 if(evento==5){
   img.src = "../img/comandante.png"
   divNome.innerHTML = "Burguesia"
-  divFala.innerHTML = "A coroa precisa de nós, o comercio com as indias anda mal! Vamos enviar alguns recursos?"
+  divFala.innerHTML = "A coroa precisa de nós, o comércio com as Índias anda mal! Vamos enviar alguns recursos?"
   divButonD.innerHTML = "Eles podem aguentar mais." //mais economia -menos coroa
   divButonE.innerHTML = "Faço isso já!" //mais coroa -menos economia
   divBolinhaE = [true/*economia*/,false/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
@@ -185,28 +185,28 @@ if(evento==5){
 if(evento==6){
   img.src = "../img/rei.png"
   divNome.innerHTML = "Portugal"
-  divFala.innerHTML = "Encontramos mais terras, isso significa mais chances de joias, deseja realizar uma incursão?"
-  divButonD.innerHTML = "leve alguns homens" //menos mão de obra -mais economia
-  divButonE.innerHTML = "Sem nenhuma exploração aprofundada? sem chance!" //um pouco menos coroa -um pouco menos economia
+  divFala.innerHTML = "Encontramos mais terras, isso significa mais chances de joias. Deseja realizar uma incursão?"
+  divButonD.innerHTML = "Leve alguns homens" //menos mão de obra -mais economia
+  divButonE.innerHTML = "Sem nenhuma exploração aprofundada? Sem chance!" //um pouco menos coroa -um pouco menos economia
   divBolinhaE = [true/*economia*/,false/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
   divBolinhaD = [true/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
 }
 if(evento==7){
   img.src = "../img/comandante.png"
   divNome.innerHTML = "Burguesia"
-  divFala.innerHTML = "ouvi alguns escravos falando sobre pedras preciosas escondidas entre a floresta! mas pode ser apenas boatos..."
-  divButonD.innerHTML = "Boatos são boatos." //nada acontece
-  divButonE.innerHTML = "leve-os para conferir junto de alguns homens" //um pouco menos mao de obra
+  divFala.innerHTML = "Ouvi alguns escravos falando sobre pedras preciosas escondidas na floresta! Mas podem ser apenas boatos..."
+  divButonD.innerHTML = "Boatos são boatos." //nada acontec
+  divButonE.innerHTML = "Leve-os para conferir junto a alguns homens" //um pouco menos mao de obra
   divBolinhaE = [false/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
   divBolinhaD = [false/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 }
 
 if(evento==8){
   img.src = "../img/comandante.png"
-  divNome.innerHTML = "comandante"
-  divFala.innerHTML = "existem boatos sobre uma rebeliam dos indigenas"
-  divButonD.innerHTML = "esta tudo sobe controle!" //menos recursos -menos mao de obra -menos coroa
-  divButonE.innerHTML = "contenha-os antes que aconteça algo!" //um pouco menos mao de obra -mais coroa
+  divNome.innerHTML = "Comandante"
+  divFala.innerHTML = "Existem boatos sobre uma rebelião dos indígenas"
+  divButonD.innerHTML = "Está tudo sob controle!" //menos recursos -menos mao de obra -menos coroa
+  divButonE.innerHTML = "Contenha-os antes que aconteça algo!" //um pouco menos mao de obra -mais coroa
   divBolinhaE = [false/*economia*/,false/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
   divBolinhaD = [false/*economia*/,true/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
 }
@@ -214,26 +214,26 @@ if(evento==9){
   img.src = "../img/rei.png"
   divNome.innerHTML = "Burgueses"
   divFala.innerHTML = "Não podemos deixar os estrangeiros terem vantagem no descobrimento das terras, devemos aumentar a exploração!"
-  divButonD.innerHTML = "precisamos nos atentarmos a firmar a terra que ja conquistamos!" //um pouco menos coroa -um pouco mais mao de obra
-  divButonE.innerHTML = "iremos em busca de terras!!! PELA COROAAA!!!" //Mais coroa -menos mao de obra
+  divButonD.innerHTML = "Precisamos garantir o território que já conquistamos!" //um pouco menos coroa -um pouco mais mao de obra
+  divButonE.innerHTML = "Iremos em busca de terras!!! Pela Coroa!!!" //Mais coroa -menos mao de obra
   divBolinhaE = [true/*economia*/,false/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
   divBolinhaD = [false/*economia*/,true/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
 }
 if(evento==10){
   img.src = "../img/comandante.png"
   divNome.innerHTML = "Burgueses"
-  divFala.innerHTML = "A coroa ordenou iniciarmos instancias de poder local para melhor admistração, algumas familias de burgeses tem uma proposta para terem mais poder em troca de algumas moedas "
-  divButonD.innerHTML = "diga-os que ja tenho meus próprios trocados" //um pouco menos economia -mais coroa
-  divButonE.innerHTML = "eles sempre foram minha primeira opção!" //mais economia -um pouco mais coroa
+  divFala.innerHTML = "A Coroa ordenou iniciarmos estâncias de poder local para melhor administração. Algumas famílias de burgueses tém uma proposta para terem mais poder em troca de algumas moedas"
+  divButonD.innerHTML = "Diga que já tenho meus próprios trocados" //um pouco menos economia -mais coroa
+  divButonE.innerHTML = "Eles sempre foram minha primeira opção!" //mais economia -um pouco mais coroa
   divBolinhaE = [true/*economia*/,false/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
   divBolinhaD = [true/*economia*/,false/*recursos*/,true/*coroa*/,false/*mao de obra*/ ]
 }
 if(evento==11){
   img.src = "../img/rei.png"
   divNome.innerHTML = "Burgueses"
-  divFala.innerHTML = "Cada vez mais estrangeiros dão as caras por aqui, o que devemos fazer? eles não estão cumprindo o tratado!!!"
-  divButonD.innerHTML = "prepare o ataque" //menos mao de obra -menos recursos
-  divButonE.innerHTML = "fortaleça as defezas" //um pouco menos mao de obra -um pouco mais coroa
+  divFala.innerHTML = "Cada vez mais estrangeiros dão as caras por aqui. O que devemos fazer? Eles não estão cumprindo o tratado!!!"
+  divButonD.innerHTML = "Prepare o ataque" //menos mao de obra -menos recursos
+  divButonE.innerHTML = "Fortaleça as defesas" //um pouco menos mao de obra -um pouco mais coroa
   divBolinhaE = [false/*economia*/,false/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
   divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
   //spam quebra tratado tordesilhas
@@ -241,9 +241,9 @@ if(evento==11){
 if(evento==12){
   img.src = "../img/comandante.png"
   divNome.innerHTML = "Burgueses"
-  divFala.innerHTML = "Cada vez mais temos terras ferteis com as explorações, que tal aumentarmos nossas plantações?"
-  divButonD.innerHTML = "esta bom assim" //um pouco menos recursos
-  divButonE.innerHTML = "quanto mais melhor" //menos mão de obra -mais economia -um pouco mais recursos
+  divFala.innerHTML = "Cada vez mais temos terras férteis com as explorações. Que tal aumentarmos nossas plantações?"
+  divButonD.innerHTML = "Esta bom assim!" //um pouco menos recursos
+  divButonE.innerHTML = "Quanto mais, melhor!" //menos mão de obra -mais economia -um pouco mais recursos
   divBolinhaE = [true/*economia*/,true/*recursos*/,false/*coroa*/,true/*mao de obra*/ ]
   divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
   //spam sobre os produtos plantados o brasil
@@ -251,9 +251,9 @@ if(evento==12){
 if(evento==13){
   img.src = "../img/rei.png"
   divNome.innerHTML = "Burgueses"
-  divFala.innerHTML = "A coroa nos trara mais mão de obra escrava trazidos da africa atravez do atlantico, onde devemos empregar a nova mao de obra?"
-  divButonD.innerHTML = "mineração, é claro" //mais recursos
-  divButonE.innerHTML = "plantações" //mais economia
+  divFala.innerHTML = "A Coroa nos trará mais mão de obra escrava trazida da África através do Atlântico. Onde devemos empregar a nova mao de obra?"
+  divButonD.innerHTML = "Mineração, é claro!" //mais recursos
+  divButonE.innerHTML = "Plantações" //mais economia
   divBolinhaE = [true/*economia*/,false/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
   divBolinhaD = [false/*economia*/,true/*recursos*/,false/*coroa*/,false/*mao de obra*/ ]
 //spam sobre a chegada dos navios negreiros
@@ -261,9 +261,9 @@ if(evento==13){
 if(evento==14){
   img.src = "../img/comandante.png"
   divNome.innerHTML = "Burgueses"
-  divFala.innerHTML = "SENHOR A ESPANHA TOMOU CONTA DE PORTUGAL AGORA ESTAMOS SOB NOVA REGENCIA E NÃO HÁ O QUE FAZER..."
-  divButonD.innerHTML = "O QUEE?!?!?!??" //tudo pra 0
-  divButonE.innerHTML = "O QUEE?!?!?!??!" //tudo vai para 0
+  divFala.innerHTML = "Senhor, a Espanha tomou conta de Portugal e agora estanos sob nova Regência. Não há o que fazer..."
+  divButonD.innerHTML = "O quê?!?!?!??" //tudo pra 0
+  divButonE.innerHTML = "O quê?!?!?!??!" //tudo vai para 0
   divBolinhaE = [true/*economia*/,true/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
   divBolinhaD = [true/*economia*/,true/*recursos*/,true/*coroa*/,true/*mao de obra*/ ]
 }
@@ -321,7 +321,7 @@ function resposta(respostaAux,evento){
       }, 1500)
     }
     if(respostaAux=="direita"){
-      maoDeObra += 10
+      maoDeObra -= 10
       aniMao.style.backgroundColor = "red";
       aniMao.style.height = maoDeObra.toString()+"%"
       setTimeout(function voltacor(){
@@ -342,27 +342,27 @@ function resposta(respostaAux,evento){
 
   if (evento==1){
     if(respostaAux=="esquerda"&&morte==false){
-      coroa += 10
-      recursos -= 5
+      coroa += 5
+      maoDeObra += 10
       aniCor.style.backgroundColor = "lawngreen";
-      aniRec.style.backgroundColor = "red";
+      aniMao.style.backgroundColor = "lawngreen";
       aniCor.style.height = coroa.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+      aniMao.style.height = maoDeObra.toString()+"%"
       setTimeout(function voltacor(){
         aniCor.style.backgroundColor = "#efd292";
-        aniRec.style.backgroundColor = "#efd292";
+        aniMao.style.backgroundColor = "#efd292";
       }, 1500)
     }
     if(respostaAux=="direita"){
-      coroa -= 5
-      recursos += 10
-      aniCor.style.backgroundColor = "red";
-      aniRec.style.backgroundColor = "lawngreen";
+      coroa += 10
+      maoDeObra += 5
+      aniCor.style.backgroundColor = "lawngreen";
+      aniMao.style.backgroundColor = "lawngreen";
       aniCor.style.height = coroa.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+      aniMao.style.height = maoDeObra.toString()+"%"
       setTimeout(function voltacor(){
         aniCor.style.backgroundColor = "#efd292";
-        aniRec.style.backgroundColor = "#efd292";
+        aniMao.style.backgroundColor = "#efd292";
       }, 1500)
     } setTimeout(function(){  
       Swal.fire({
@@ -377,26 +377,23 @@ function resposta(respostaAux,evento){
   }
   if (evento==2){
     if(respostaAux=="esquerda"){
-      economia += 10
-      recursos -= 15
-      aniRec.style.backgroundColor = "red";
-      aniEco.style.backgroundColor = "lawngreen";
-      aniEco.style.height = economia.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+      coroa -= 10
+      aniCor.style.backgroundColor = "red";
+      aniCor.style.height = coroa.toString()+"%"
       setTimeout(function voltacor(){
         aniRec.style.backgroundColor = "#efd292";
         aniEco.style.backgroundColor = "#efd292";
       }, 1500)
     }
     if(respostaAux=="direita"){
-      maoDeObra -= 6
-      recursos += 9
+      maoDeObra -= 10
+      coroa += 10
       aniMao.style.backgroundColor = "red";
-      aniRec.style.backgroundColor = "lawngreen";
+      aniCor.style.backgroundColor = "lawngreen";
       aniMao.style.height = maoDeObra.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+      aniCor.style.height = coroa.toString()+"%"
       setTimeout(function voltacor(){
-        aniRec.style.backgroundColor = "#efd292";
+        aniCor.style.backgroundColor = "#efd292";
         aniMao.style.backgroundColor = "#efd292";
       }, 1500)
     }
@@ -404,231 +401,280 @@ function resposta(respostaAux,evento){
   if (evento==3){
     if(respostaAux=="esquerda"){
       economia += 10
-      recursos -= 15
-      aniRec.style.backgroundColor = "red";
+      recursos += 10
+      coroa += 10
+      maoDeObra += 10
+
       aniEco.style.backgroundColor = "lawngreen";
+      aniRec.style.backgroundColor = "lawngreen";
+      aniMao.style.backgroundColor = "lawngreen";
+      aniCor.style.backgroundColor = "lawngreen";
+
       aniEco.style.height = economia.toString()+"%"
       aniRec.style.height = recursos.toString()+"%"
+      aniMao.style.height = maoDeObra.toString()+"%"
+      aniCor.style.height = coroa.toString()+"%"
+
       setTimeout(function voltacor(){
         aniRec.style.backgroundColor = "#efd292";
         aniEco.style.backgroundColor = "#efd292";
+        aniMao.style.backgroundColor = "#efd292";
+        aniCor.style.backgroundColor = "#efd292";
       }, 1500)
     }
     if(respostaAux=="direita"){
-      maoDeObra -= 6
-      recursos += 9
-      aniMao.style.backgroundColor = "red";
-      aniRec.style.backgroundColor = "lawngreen";
-      aniMao.style.height = maoDeObra.toString()+"%"
+      coroa -= 10
+      recursos -= 10
+
+      aniCor.style.backgroundColor = "red";
+      aniRec.style.backgroundColor = "red";
+
+      aniCor.style.height = coroa.toString()+"%"
       aniRec.style.height = recursos.toString()+"%"
+
       setTimeout(function voltacor(){
         aniRec.style.backgroundColor = "#efd292";
-        aniMao.style.backgroundColor = "#efd292";
+        aniCor.style.backgroundColor = "#efd292";
       }, 1500)
     }
   }
+
   if (evento==4){
     if(respostaAux=="esquerda"){
       economia += 10
-      recursos -= 15
+      recursos -= 10
+
       aniRec.style.backgroundColor = "red";
       aniEco.style.backgroundColor = "lawngreen";
+
       aniEco.style.height = economia.toString()+"%"
       aniRec.style.height = recursos.toString()+"%"
+
       setTimeout(function voltacor(){
         aniRec.style.backgroundColor = "#efd292";
         aniEco.style.backgroundColor = "#efd292";
       }, 1500)
     }
     if(respostaAux=="direita"){
-      maoDeObra -= 6
-      recursos += 9
+      coroa -= 10
+      economia -= 5
+
       aniMao.style.backgroundColor = "red";
-      aniRec.style.backgroundColor = "lawngreen";
-      aniMao.style.height = maoDeObra.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+      aniEco.style.backgroundColor = "red";
+
+      aniCor.style.height = coroa.toString()+"%"
+      aniEco.style.height = economia.toString()+"%"
+
       setTimeout(function voltacor(){
-        aniRec.style.backgroundColor = "#efd292";
-        aniMao.style.backgroundColor = "#efd292";
+        aniCor.style.backgroundColor = "#efd292";
+        aniEco.style.backgroundColor = "#efd292";
       }, 1500)
     }
   }
   if (evento==5){
     if(respostaAux=="esquerda"){
-      economia += 10
-      recursos -= 15
-      aniRec.style.backgroundColor = "red";
-      aniEco.style.backgroundColor = "lawngreen";
+      economia -= 10
+      coroa += 10
+
+      aniCor.style.backgroundColor = "lawngreen";
+      aniEco.style.backgroundColor = "red";
+
       aniEco.style.height = economia.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+      aniCor.style.height = coroa.toString()+"%"
+
       setTimeout(function voltacor(){
-        aniRec.style.backgroundColor = "#efd292";
+        aniCor.style.backgroundColor = "#efd292";
         aniEco.style.backgroundColor = "#efd292";
       }, 1500)
     }
     if(respostaAux=="direita"){
-      maoDeObra -= 6
-      recursos += 9
-      aniMao.style.backgroundColor = "red";
-      aniRec.style.backgroundColor = "lawngreen";
-      aniMao.style.height = maoDeObra.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+      economia += 10
+      coroa -= 10
+
+      aniCor.style.backgroundColor = "red";
+      aniEco.style.backgroundColor = "lawngreen";
+
+      aniEco.style.height = economia.toString()+"%"
+      aniCor.style.height = coroa.toString()+"%"
+
       setTimeout(function voltacor(){
-        aniRec.style.backgroundColor = "#efd292";
-        aniMao.style.backgroundColor = "#efd292";
+        aniCor.style.backgroundColor = "#efd292";
+        aniEco.style.backgroundColor = "#efd292";
       }, 1500)
-    }
   }
   if (evento==6){
     if(respostaAux=="esquerda"){
-      economia += 10
-      recursos -= 15
-      aniRec.style.backgroundColor = "red";
-      aniEco.style.backgroundColor = "lawngreen";
+      economia -= 10
+      coroa += 10
+
+      aniCor.style.backgroundColor = "lawngreen";
+      aniEco.style.backgroundColor = "red";
+
       aniEco.style.height = economia.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+      aniCor.style.height = coroa.toString()+"%"
+
       setTimeout(function voltacor(){
-        aniRec.style.backgroundColor = "#efd292";
+        aniCor.style.backgroundColor = "#efd292";
         aniEco.style.backgroundColor = "#efd292";
       }, 1500)
     }
     if(respostaAux=="direita"){
-      maoDeObra -= 6
-      recursos += 9
+      maoDeObra -= 10
+      economia += 10
+
       aniMao.style.backgroundColor = "red";
-      aniRec.style.backgroundColor = "lawngreen";
+      aniEco.style.backgroundColor = "lawngreen";
+
       aniMao.style.height = maoDeObra.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+      aniEco.style.height = economia.toString()+"%"
+
       setTimeout(function voltacor(){
-        aniRec.style.backgroundColor = "#efd292";
+        aniEco.style.backgroundColor = "#efd292";
         aniMao.style.backgroundColor = "#efd292";
       }, 1500)
     }
   }
   if (evento==7){
     if(respostaAux=="esquerda"){
-      economia += 10
-      recursos -= 15
-      aniRec.style.backgroundColor = "red";
-      aniEco.style.backgroundColor = "lawngreen";
-      aniEco.style.height = economia.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
-      setTimeout(function voltacor(){
-        aniRec.style.backgroundColor = "#efd292";
-        aniEco.style.backgroundColor = "#efd292";
-      }, 1500)
-    }
-    if(respostaAux=="direita"){
-      maoDeObra -= 6
-      recursos += 9
+      maoDeObra -= 10
+
       aniMao.style.backgroundColor = "red";
-      aniRec.style.backgroundColor = "lawngreen";
+
       aniMao.style.height = maoDeObra.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+
       setTimeout(function voltacor(){
-        aniRec.style.backgroundColor = "#efd292";
         aniMao.style.backgroundColor = "#efd292";
       }, 1500)
+    }
+    }
+    if(respostaAux=="direita"){
+      
     }
   }
   if (evento==8){
     if(respostaAux=="esquerda"){
-      economia += 10
-      recursos -= 15
-      aniRec.style.backgroundColor = "red";
-      aniEco.style.backgroundColor = "lawngreen";
-      aniEco.style.height = economia.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+      maoDeObra -= 5
+      coroa += 15
+      aniMao.style.backgroundColor = "red";
+      aniCor.style.backgroundColor = "lawngreen";
+
+      aniMao.style.height = maoDeObra.toString()+"%"
+      aniCor.style.height = coroa.toString()+"%"
+
       setTimeout(function voltacor(){
-        aniRec.style.backgroundColor = "#efd292";
-        aniEco.style.backgroundColor = "#efd292";
+        aniMao.style.backgroundColor = "#efd292";
+        aniCor.style.backgroundColor = "#efd292";
       }, 1500)
     }
     if(respostaAux=="direita"){
-      maoDeObra -= 6
-      recursos += 9
+      maoDeObra -= 10
+      coroa -= 10
+      recursos -=10
+
       aniMao.style.backgroundColor = "red";
-      aniRec.style.backgroundColor = "lawngreen";
+      aniCor.style.backgroundColor = "red";
+      aniRec.style.backgroundColor = "red";
+
       aniMao.style.height = maoDeObra.toString()+"%"
+      aniCor.style.height = coroa.toString()+"%"
       aniRec.style.height = recursos.toString()+"%"
+
       setTimeout(function voltacor(){
-        aniRec.style.backgroundColor = "#efd292";
         aniMao.style.backgroundColor = "#efd292";
+        aniCor.style.backgroundColor = "#efd292";
+        aniRec.style.backgroundColor = "#efd292";
       }, 1500)
     }
   }
   if (evento==9){
     if(respostaAux=="esquerda"){
-      economia += 10
-      recursos -= 15
-      aniRec.style.backgroundColor = "red";
-      aniEco.style.backgroundColor = "lawngreen";
-      aniEco.style.height = economia.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+      coroa += 10
+      maoDeObra -= 15
+
+      aniMao.style.backgroundColor = "red";
+      aniCor.style.backgroundColor = "lawngreen";
+
+      aniMao.style.height = maoDeObra.toString()+"%"
+      aniCor.style.height = coroa.toString()+"%"
+
       setTimeout(function voltacor(){
-        aniRec.style.backgroundColor = "#efd292";
-        aniEco.style.backgroundColor = "#efd292";
+        aniMao.style.backgroundColor = "#efd292";
+        aniCor.style.backgroundColor = "#efd292";
       }, 1500)
     }
     if(respostaAux=="direita"){
-      maoDeObra -= 6
-      recursos += 9
-      aniMao.style.backgroundColor = "red";
-      aniRec.style.backgroundColor = "lawngreen";
+      coroa -= 10
+      maoDeObra += 10
+
+      aniMao.style.backgroundColor = "lawngreen";
+      aniCor.style.backgroundColor = "red";
+
       aniMao.style.height = maoDeObra.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+      aniCor.style.height = coroa.toString()+"%"
+
       setTimeout(function voltacor(){
-        aniRec.style.backgroundColor = "#efd292";
         aniMao.style.backgroundColor = "#efd292";
+        aniCor.style.backgroundColor = "#efd292";
       }, 1500)
     }
   }
   if (evento==10){
     if(respostaAux=="esquerda"){
       economia += 10
-      recursos -= 15
-      aniRec.style.backgroundColor = "red";
+      coroa += 10
+
+      aniCor.style.backgroundColor = "lawngreen";
       aniEco.style.backgroundColor = "lawngreen";
+
       aniEco.style.height = economia.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+      aniCor.style.height = coroa.toString()+"%"
+
       setTimeout(function voltacor(){
-        aniRec.style.backgroundColor = "#efd292";
+        aniCor.style.backgroundColor = "#efd292";
         aniEco.style.backgroundColor = "#efd292";
       }, 1500)
     }
     if(respostaAux=="direita"){
-      maoDeObra -= 6
-      recursos += 9
-      aniMao.style.backgroundColor = "red";
-      aniRec.style.backgroundColor = "lawngreen";
-      aniMao.style.height = maoDeObra.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+      economia -= 10
+      coroa += 10
+
+      aniCor.style.backgroundColor = "lawngreen";
+      aniEco.style.backgroundColor = "red";
+
+      aniEco.style.height = economia.toString()+"%"
+      aniCor.style.height = coroa.toString()+"%"
+
       setTimeout(function voltacor(){
-        aniRec.style.backgroundColor = "#efd292";
-        aniMao.style.backgroundColor = "#efd292";
+        aniCor.style.backgroundColor = "#efd292";
+        aniEco.style.backgroundColor = "#efd292";
       }, 1500)
     }
   }
   if (evento==11){
     if(respostaAux=="esquerda"){
-      economia += 10
-      recursos -= 15
-      aniRec.style.backgroundColor = "red";
-      aniEco.style.backgroundColor = "lawngreen";
-      aniEco.style.height = economia.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+      coroa += 10
+      maoDeObra -= 15
+
+      aniMao.style.backgroundColor = "red";
+      aniCor.style.backgroundColor = "lawngreen";
+
+      aniCor.style.height = coroa.toString()+"%"
+      aniMao.style.height = maoDeObra.toString()+"%"
       setTimeout(function voltacor(){
-        aniRec.style.backgroundColor = "#efd292";
-        aniEco.style.backgroundColor = "#efd292";
+        aniCor.style.backgroundColor = "#efd292";
+        aniMao.style.backgroundColor = "#efd292";
       }, 1500)
     }
     if(respostaAux=="direita"){
-      maoDeObra -= 6
-      recursos += 9
+      maoDeObra -= 10
+      recursos -= 10
+
       aniMao.style.backgroundColor = "red";
-      aniRec.style.backgroundColor = "lawngreen";
+      aniRec.style.backgroundColor = "red";
+
       aniMao.style.height = maoDeObra.toString()+"%"
       aniRec.style.height = recursos.toString()+"%"
+
       setTimeout(function voltacor(){
         aniRec.style.backgroundColor = "#efd292";
         aniMao.style.backgroundColor = "#efd292";
@@ -638,78 +684,104 @@ function resposta(respostaAux,evento){
   if (evento==12){
     if(respostaAux=="esquerda"){
       economia += 10
-      recursos -= 15
-      aniRec.style.backgroundColor = "red";
+      recursos += 10
+      maoDeObra -= 10
+
+      aniRec.style.backgroundColor = "lawngreen";
       aniEco.style.backgroundColor = "lawngreen";
+      aniMao.style.backgroundColor = "red";
+
       aniEco.style.height = economia.toString()+"%"
       aniRec.style.height = recursos.toString()+"%"
+      aniMao.style.height = maoDeObra.toString()+"%"
+
       setTimeout(function voltacor(){
         aniRec.style.backgroundColor = "#efd292";
         aniEco.style.backgroundColor = "#efd292";
+        aniMao.style.backgroundColor = "#efd292";
       }, 1500)
     }
     if(respostaAux=="direita"){
-      maoDeObra -= 6
-      recursos += 9
-      aniMao.style.backgroundColor = "red";
-      aniRec.style.backgroundColor = "lawngreen";
-      aniMao.style.height = maoDeObra.toString()+"%"
+      recursos -= 10
+
+      aniRec.style.backgroundColor = "red";
+
       aniRec.style.height = recursos.toString()+"%"
+
       setTimeout(function voltacor(){
         aniRec.style.backgroundColor = "#efd292";
-        aniMao.style.backgroundColor = "#efd292";
       }, 1500)
     }
   }
   if (evento==13){
     if(respostaAux=="esquerda"){
       economia += 10
-      recursos -= 15
-      aniRec.style.backgroundColor = "red";
+
       aniEco.style.backgroundColor = "lawngreen";
+
       aniEco.style.height = economia.toString()+"%"
-      aniRec.style.height = recursos.toString()+"%"
+
       setTimeout(function voltacor(){
-        aniRec.style.backgroundColor = "#efd292";
         aniEco.style.backgroundColor = "#efd292";
       }, 1500)
     }
     if(respostaAux=="direita"){
-      maoDeObra -= 6
-      recursos += 9
-      aniMao.style.backgroundColor = "red";
+      recursos += 15
+
       aniRec.style.backgroundColor = "lawngreen";
-      aniMao.style.height = maoDeObra.toString()+"%"
+
       aniRec.style.height = recursos.toString()+"%"
+
       setTimeout(function voltacor(){
         aniRec.style.backgroundColor = "#efd292";
-        aniMao.style.backgroundColor = "#efd292";
       }, 1500)
     }
   }
   if (evento==14){
     if(respostaAux=="esquerda"){
-      economia += 10
-      recursos -= 15
+      economia = 0
+      recursos = 0
+      maoDeObra = 0
+      coroa = 0
+
       aniRec.style.backgroundColor = "red";
-      aniEco.style.backgroundColor = "lawngreen";
+      aniEco.style.backgroundColor = "red";
+      aniMao.style.backgroundColor = "red";
+      aniCor.style.backgroundColor = "red";
+
       aniEco.style.height = economia.toString()+"%"
       aniRec.style.height = recursos.toString()+"%"
+      aniMao.style.height = maoDeObra.toString()+"%"
+      aniCor.style.height = coroa.toString()+"%"
+
       setTimeout(function voltacor(){
         aniRec.style.backgroundColor = "#efd292";
         aniEco.style.backgroundColor = "#efd292";
+        aniMao.style.backgroundColor = "#efd292";
+        aniCor.style.backgroundColor = "#efd292";
       }, 1500)
     }
     if(respostaAux=="direita"){
-      maoDeObra -= 6
-      recursos += 9
+      economia = 0
+      recursos = 0
+      maoDeObra = 0
+      coroa = 0
+
+      aniRec.style.backgroundColor = "red";
+      aniEco.style.backgroundColor = "red";
       aniMao.style.backgroundColor = "red";
-      aniRec.style.backgroundColor = "lawngreen";
-      aniMao.style.height = maoDeObra.toString()+"%"
+      aniCor.style.backgroundColor = "red";
+
+      aniEco.style.height = economia.toString()+"%"
       aniRec.style.height = recursos.toString()+"%"
+      aniMao.style.height = maoDeObra.toString()+"%"
+      aniCor.style.height = coroa.toString()+"%"
+
       setTimeout(function voltacor(){
         aniRec.style.backgroundColor = "#efd292";
+        aniEco.style.backgroundColor = "#efd292";
         aniMao.style.backgroundColor = "#efd292";
+        aniCor.style.backgroundColor = "#efd292";
       }, 1500)
     }
   }
@@ -849,9 +921,9 @@ function desapareceBolinha() {
     auxdivBolinhaE = divBolinhaE
 }
 
-var jogadores = new Array();
+  var jogadores = new Array();
 
-function register() {
+  function register() {
     
     jogadores = JSON.parse(localStorage.getItem("Jogadores"))
     if(jogadores == null)
