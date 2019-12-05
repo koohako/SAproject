@@ -335,7 +335,33 @@ function alertMenu(){
   }).then((result) => {
     if (result.value) {
       setTimeout(function(){
-        window.location.href="../index.html"
+        Swal.mixin({
+          input: 'text',
+          confirmButtonText: 'Ok.',
+          showCancelButton: false,
+          confirmButtonColor: '#987b48',
+        }).queue([
+          {
+            title: 'Registre seu nome!',
+            text: 'Coloque seu nome para salvar sua pontuação'
+          },
+        ]).then((result) => {
+          if (result.value) {
+            const answers = JSON.stringify(result.value)
+            nome = result.value
+            Swal.fire({
+              title: 'Obrigado por ter jogado.',
+              html: `
+                Your answers:
+                <pre><code>${answers}</code></pre>
+              `,
+              confirmButtonText: 'Pronto.',
+              confirmButtonColor: '#987b48'
+            })
+            register()
+            window.location.href = "../html/tabela.html"
+          }
+        })
       },350)
     }
   })
