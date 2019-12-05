@@ -4,8 +4,18 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="../css/estilo.css">
         <link rel="stylesheet" href="../css/animate.css">
+        <script>
+        function menu(){
+            window.location.href = "../index.html"
+        }
+        function jogar(){
+            window.location.href = "iniJogo.html"
+        }
+        
+        </script>
     </head> 
     <body onload="tabela()" style="background:url('../img/onda.jpg');">
+        
         <div class="iniFormT">
             <h1 style="font-family: daora; font-size: 40px;">Pontuaçoes</h1>
             <table class="table">
@@ -19,6 +29,10 @@
                 <tbody id="tabela">        
                 </tbody>
             </table>
+        </div>
+        <div class="botoesP">
+            <button onclick="menu()" class="botoesPont" style="height: 100px;width: 200px; margin-left: 80px; margin-right: 810px;">Menu</button>
+            <button onclick="jogar()" class="botoesPont" style="height: 100px;width: 200px;">Jogar novamente</button>
         </div>
     </body>
     <script type="text/javascript" src="../js/js.js"></script>
